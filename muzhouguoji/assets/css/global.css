@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div,
+form,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+tr,
+td,
+input,
+body,
+strong,
+span,
+pre {
+  border-style: none;
+  border-color: inherit;
+  border-width: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  font-size: 13px;
+  font-family: "微软雅黑";
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  line-height: 23px;
+  height: auto;
+  clear: both;
+}
+
+img {
+  border: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  background-repeat: no-repeat;
+  color: #0068b7;
+}
+
+.indx {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  _position: relative;
+}
+
+.del_float {
+  clear: both;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+}
+
+.clear {
+  clear: both;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+}
+
+/*通用样式*/
+
+.qf {
+  clear: both;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.none {
+  display: none;
+}
+
+.qc:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.qc {
+  *zoom: 1;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+  font-family: "微软雅黑";
+  font-size: 13px;
+  color: #999;
+}
+
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+
+.fanye_01 {
+  text-align: center;
+  margin: 30px 0;
+  float: left;
+  font-size: 10px;
+}
+
+.fanye_01 a {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.fanye_01 a img {
+  float: left;
+}
+
+.fanye_01 a.left_02,
+.fanye_01 a.right_02 {
+  vertical-align: -10px;
+}
+
+.fanye_01 a.left_02 {
+  margin-right: 10px;
+}
+
+.fanye_01 a.right_02 {
+  margin-left: 10px;
+}
+
+.fanye_01 a.cur,
+.fanye_01 a:hover {
+  background: #0c72be;
+  color: #fff;
+}
+
+body {
+  width: 100%;
+}
+
+.ifrtop {
+  width: 100%;
+  border: 0;
+}
+
+.ifrfoot {
+  width: 100%;
+  border: 0;
+}
+
+/*侧飘窗*/
+.ifloatr {
+  width: 120px;
+  height: 329px;
+  background: url(images/ifloatbg.png);
+  position: fixed;
+  top: 25%;
+  right: 3px;
+  z-index: 99;
+}
+
+.ifclosse {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.ifloatr ul {
+  width: 86px;
+  margin: 70px auto 0;
+  background: url(images/ifloatul.png) 0 5px no-repeat;
+}
+
+.ifloatr li {
+  line-height: 42px;
+  text-indent: 3em;
+}
+
+.ifloatr li a {
+  color: #fff;
+}
+
+.ifloatr p {
+  text-align: center;
+}
+
+.ifloatr #ifinput {
+  width: 98px;
+  padding: 3px;
+  font: bold 13px/16px arial;
+}
+
+.ifloatr #ifbtn {
+  width: 90px;
+  height: 26px;
+  background: url(images/ifbtn.png);
+  cursor: pointer;
+  margin-top: 5px;
+  color: #333;
+}
+
+.ifloatr #ifbtn:hover {
+  background-position: 0 -28px;
+}
+
+/***** ver 3 */
+.ifloatr3 {
+  width: 110px;
+  height: 412px;
+  background: url(ifloatr3/bg.png);
+  position: fixed;
+  top: 23%;
+  right: 3px;
+  z-index: 99;
+}
+
+.ifloatr3 .ifclosse {
+  width: 12px;
+  height: 11px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+}
+
+.ifloatr3 ul {
+  width: 100%;
+  height: 122px;
+  margin: 182px auto 39px;
+  padding: 5px 0;
+  background: url(ifloatr3/ifloatul.png) center center no-repeat;
+}
+
+.ifloatr3 li {
+  line-height: 40px;
+  text-indent: 4em;
+}
+
+.ifloatr3 li a {
+  color: #144895;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ifloatr3 li a:hover {
+  color: #f28200;
+}
+
+.ifloatr3 p {
+  text-align: center;
+}
+
+.ifloatr3 #ifinput {
+  width: 86px;
+  padding: 3px;
+  font: bold 13px/16px '微软雅黑';
+  text-align: center;
+  color: #333;
+}
+
+.ifloatr3 #ifbtn {
+  width: 98px;
+  height: 26px;
+  background: url(ifloatr3/ifbtn.png);
+  cursor: pointer;
+  margin-top: 2px;
+  color: #fff;
+}
+
+.ifloatr3 #ifbtn:hover {
+  background-position: 0 -28px;
+}
+
+/* CSS Document */

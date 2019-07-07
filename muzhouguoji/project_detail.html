@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>移民项目</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+    <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/base.js"></script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        var winW = $(window).width();
+        var carouselH = winW * 0.234;
+        $(".carousel").height(carouselH);
+
+        $(window).on("resize", function() {
+          winW = $(window).width();
+          carouselH = winW * 0.234;
+          $(".carousel").height(carouselH);
+        });
+
+        // 当没有图片时，隐藏carousel
+        var size = $(".carousel .img li").size();
+        // console.log(size);
+        if (size === 0) {
+          $(".carousel").hide();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="head">
+      <h1 class="logo fl">
+        <a href="#"><img src="assets/images/logo.png" alt="牧洲国际官网"/></a>
+      </h1>
+      <div class="fr telym">
+        <img
+          src="assets/images/numbers.png"
+          width="300"
+          height="75"
+          alt="牧洲国际官网"
+        />
+      </div>
+    </div>
+    <div class="menu">
+      <div class="menubox">
+        <ul class="clearfix nav">
+          <li class="first"><a href="index.html" class="bb">首页</a></li>
+          <li class=""><a href="about.html" class="bb">关于牧洲</a></li>
+          <li
+            class="menu2 clearfix"
+            onmousemove="show(this)"
+            onmouseout="hide(this)"
+          >
+            <a href="project.html" class="aa bb">移民项目</a>
+            <div class="menurr clearfix" style="display: none;">
+              <div class="mlft fl ">
+                <a href="javascript:void(0);"
+                  ><span class="passport">护照项目</span></a
+                >
+                <a href="javascript:void(0);"
+                  ><span class="otherpr">居留卡项目</span></a
+                >
+                <a href="javascript:void(0);"
+                  ><span class="otherp">技术移民</span></a
+                >
+              </div>
+              <div class="mrft">
+                <div class="mrftone clearfix">
+                  <a href="javascript:void(0);" title="墨西哥">墨西哥</a>
+                  <a href="javascript:void(0);" title="保加利亚">保加利亚</a>
+                  <a href="javascript:void(0);" title="圣基茨和尼维斯"
+                    >圣基茨和尼维斯</a
+                  >
+                  <a href="javascript:void(0);" title="克罗地亚">克罗地亚</a>
+                  <a href="javascript:void(0);" title="巴拉圭">巴拉圭</a>
+                  <a href="javascript:void(0);" title="危地马拉">危地马拉</a>
+                  <a href="javascript:void(0);" title="马绍尔">马绍尔</a>
+                  <a href="javascript:void(0);" title="缅甸">缅甸</a>
+                </div>
+                <div class="mrfttwo  clearfix">
+                  <a href="javascript:void(0);" title="希腊">希腊</a>
+                  <a href="javascript:void(0);" title="马耳他">马耳他</a>
+                  <a href="javascript:void(0);" title="奥地利">奥地利</a>
+                  <a href="javascript:void(0);" title="加拿大">加拿大</a>
+                  <a href="javascript:void(0);" title="斯洛文尼亚"
+                    >斯洛文尼亚</a
+                  >
+                  <a href="javascript:void(0);" title="斯洛伐克">斯洛伐克</a>
+                </div>
+                <div class="mrftfour clearfix">
+                  <a
+                    href="javascript:void(0);"
+                    title="加拿大大西洋四省雇主担保移民"
+                    >加拿大大西洋四省雇主担保移民</a
+                  >
+                  <a href="javascript:void(0);" title="加拿大安省雇主担保移民"
+                    >加拿大安省雇主担保移民</a
+                  >
+                  <a href="javascript:void(0);" title="加拿大联邦雇主担保移民"
+                    >加拿大联邦雇主担保移民</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class=""><a href="overseas.html" class="bb">海外房产</a></li>
+          <li class=""><a href="news.html" class="bb">新闻资讯</a></li>
+          <li class=""><a href="contact.html" class="bb">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function show(li) {
+        var getmenu = li.getElementsByTagName("div")[0];
+        getmenu.style.display = "block";
+      }
+      function hide(li) {
+        var getmenu = li.getElementsByTagName("div")[0];
+        getmenu.style.display = "none";
+      }
+    </script>
+
+    <div class="carousel pr">
+      <ul class="img">
+        <li>
+          <a href="javascript:void(0);"
+            ><img src="assets/images/banner_mexico.jpg" width="100%" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><img src="assets/images/banner_mexico.jpg" width="100%" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><img src="assets/images/banner_mexico.jpg" width="100%" alt=""
+          /></a>
+        </li>
+      </ul>
+      <ul class="num textc"></ul>
+      <div class="btn textc left">&lt;</div>
+      <div class="btn textc right">&gt;</div>
+    </div>
+
+    <section style="padding:50px 0;">
+      <div class="my-container">
+        自定义编辑区域
+      </div>
+    </section>
+
+    <div class="footer mt28" style="margin-top: 0">
+      <div class="footbox">
+        <div class="con">
+          <a href="javascript:void(0);"
+            >Copyright © 联合移民 版权所有 辽ICP备16013856号-1</a
+          >
+          <a href="javascript:void(0);"
+            >联系电话：400-078-9191&nbsp;<span
+              >地址：沈阳市皇姑区蒲河街7号沈阳科技创新中心</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+#divfloat_On {
+    position: fixed;
+    bottom: 0;
+    /*background: #000;*/
+    width: 100%;
+    height: 180px;
+    /*line-height: 23px;*/
+    z-index: 999;
+    /*opacity: .60;
+            filter: alpha(opacity=60);*/
+    _bottom: auto;
+    _width: 100%;
+    _position: absolute;
+    _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+    background: url(../images/ad_footer.jpg);
+    background-position: center center;
+    /*margin: auto;
+    left: 0;
+    right: 0;*/
+}
+
+#div_position {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 2px;
+    height: 180px;
+}
+
+    #div_position p {
+        position: absolute;
+        bottom: 105px;
+        right: 261px;
+        font-size: 87.34px;
+        color: #070707;
+        letter-spacing: 46px;
+        font-weight: bold;
+        margin: 0px;
+    }
+
+#a_close {
+    position: absolute;
+    bottom: 160px;
+    left: 506px;
+    width: 20px;
+    height: 20px;
+}
+
+#a_zhuanti {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 1000px;
+    height: 180px;
+}
+
+#divfloat_Off {
+    position: fixed;
+    bottom: 0;
+    /*background: #000;*/
+    width: 185px;
+    height: 127px;
+    line-height: 23px;
+    z-index: 999;
+    /*opacity: .60;
+            filter: alpha(opacity=60);*/
+    _bottom: auto;
+    _width: 185px;
+    _position: absolute;
+    _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+    background: url(../images/ad_footer.png);
+}
+
+    #divfloat_Off a {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 185px;
+        height: 127px;
+    }

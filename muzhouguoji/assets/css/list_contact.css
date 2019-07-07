@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Logan
+ * @date    2016-04-06 10:55:04
+ * @version 1.0
+ */
+.floatl { float: left; }
+.floatr { float: right; }
+
+
+
+/**公司简介**/
+.mainbody { width:1200px;margin: 0 auto; background:#f8f7f7;}
+.mainbody .position {font-size: 14px; line-height: 50px;  width: 1200px; height: 50px; margin: 0 auto; color: #666; }
+.mainbody .position a {padding: 0 5px;  color: #666; }
+.mainbody .content { width: 1200px; margin: 0 auto; background: #fff; }
+.mainbody .article { width: 800px; margin: 0 auto; padding-bottom: 50px; }
+.mainbody .a-title { padding: 35px 0 10px; text-align: center;background: url(images/s-title-bg.png) bottom center no-repeat; }
+.mainbody .a-title h1 { font-size: 24px; line-height: 32px;color: #315ba3; }
+.mainbody .a-title h2 {font-family: "Helvetica"; font-size: 30px; line-height: 32px; color: #c6c6c6; }
+
+
+/**联系我们**/
+.contact{  width: 800px; margin: 0 auto; padding-top: 40px; }
+.contact .address{ margin-top: 20px; }
+.contact .address p{ font-size: 16px; line-height: 30px; color: #666; }
+.contact .address .qrcode{ margin-left: 673px;margin-top: -135px; }
+.contact .address .qrcode img{ width: 140px; height: 140px; }
+

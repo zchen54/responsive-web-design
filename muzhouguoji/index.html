@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>首页</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/font-awesome.min.css"
+    />
+    <!-- Plugins -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/flexslider.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/template.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+    <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins.min.js"></script>
+    <script type="text/javascript" src="assets/js/custom.min.js"></script>
+    <script type="text/javascript" src="assets/js/base.js"></script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
+    <script type="text/javascript">
+      $(function(){
+          var winW = $(window).width();
+          var carouselH = winW * 0.234;
+          $(".carousel").height(carouselH);
+    
+          $(window).on("resize",function(){
+              winW = $(window).width();
+              carouselH = winW * 0.234;
+              $(".carousel").height(carouselH);
+          });
+    
+          // 当没有图片时，隐藏carousel
+          var size = $(".carousel .img li").size();
+          // console.log(size);
+          if(size === 0){
+              $(".carousel").hide();
+          }
+      });
+    </script>
+  </head>
+  <body>
+  <div class="head">
+      <h1 class="logo fl">
+        <a href="#"><img src="assets/images/logo.png" alt="牧洲国际官网"/></a>
+      </h1>
+      <div class="fr telym">
+        <img
+          src="assets/images/numbers.png"
+          width="300"
+          height="75"
+          alt="牧洲国际官网"
+        />
+      </div>
+    </div>
+    <div class="menu">
+      <div class="menubox">
+        <ul class="clearfix nav">
+          <li class="first"><a href="index.html" class="bb">首页</a></li>
+          <li class=""><a href="about.html" class="bb">关于牧洲</a></li>
+          <li
+            class="menu2 clearfix"
+            onmousemove="show(this)"
+            onmouseout="hide(this)"
+          >
+            <a href="project.html" class="aa bb">移民项目</a>
+            <div class="menurr clearfix" style="display: none;">
+              <div class="mlft fl ">
+                <a href="javascript:void(0);"
+                  ><span class="passport">护照项目</span></a
+                >
+                <a href="javascript:void(0);"
+                  ><span class="otherpr">居留卡项目</span></a
+                >
+                <a href="javascript:void(0);"
+                  ><span class="otherp">技术移民</span></a
+                >
+              </div>
+              <div class="mrft">
+                <div class="mrftone clearfix">
+                  <a href="javascript:void(0);" title="墨西哥">墨西哥</a>
+                  <a href="javascript:void(0);" title="保加利亚">保加利亚</a>
+                  <a href="javascript:void(0);" title="圣基茨和尼维斯"
+                    >圣基茨和尼维斯</a
+                  >
+                  <a href="javascript:void(0);" title="克罗地亚">克罗地亚</a>
+                  <a href="javascript:void(0);" title="巴拉圭">巴拉圭</a>
+                  <a href="javascript:void(0);" title="危地马拉">危地马拉</a>
+                  <a href="javascript:void(0);" title="马绍尔">马绍尔</a>
+                  <a href="javascript:void(0);" title="缅甸">缅甸</a>
+                </div>
+                <div class="mrfttwo  clearfix">
+                  <a href="javascript:void(0);" title="希腊">希腊</a>
+                  <a href="javascript:void(0);" title="马耳他">马耳他</a>
+                  <a href="javascript:void(0);" title="奥地利">奥地利</a>
+                  <a href="javascript:void(0);" title="加拿大">加拿大</a>
+                  <a href="javascript:void(0);" title="斯洛文尼亚"
+                    >斯洛文尼亚</a
+                  >
+                  <a href="javascript:void(0);" title="斯洛伐克">斯洛伐克</a>
+                </div>
+                <div class="mrftfour clearfix">
+                  <a
+                    href="javascript:void(0);"
+                    title="加拿大大西洋四省雇主担保移民"
+                    >加拿大大西洋四省雇主担保移民</a
+                  >
+                  <a href="javascript:void(0);" title="加拿大安省雇主担保移民"
+                    >加拿大安省雇主担保移民</a
+                  >
+                  <a href="javascript:void(0);" title="加拿大联邦雇主担保移民"
+                    >加拿大联邦雇主担保移民</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class=""><a href="overseas.html" class="bb">海外房产</a></li>
+          <li class=""><a href="news.html" class="bb">新闻资讯</a></li>
+          <li class=""><a href="contact.html" class="bb">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function show(li) {
+        var getmenu = li.getElementsByTagName("div")[0];
+        getmenu.style.display = "block";
+      }
+      function hide(li) {
+        var getmenu = li.getElementsByTagName("div")[0];
+        getmenu.style.display = "none";
+      }
+    </script>
+
+    <div class="carousel pr">
+      <ul class="img">
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1548227325710.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1532486655188.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1539050911034.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1528792656373.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1526259307835.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1559292227695.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1560932908502.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1560932490250.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1537858197287.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1530257116851.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1550716421916.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1548312140245.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1531274590693.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1522223521967.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1496624780167.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1490681211783.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+
+        <li>
+          <a href="index.html"
+            ><img
+              src="assets/images/1496369806168.jpg"
+              width="100%"
+              alt=""
+          /></a>
+        </li>
+      </ul>
+      <ul class="num textc"></ul>
+      <div class="btn textc left">&lt;</div>
+      <div class="btn textc right">&gt;</div>
+    </div>
+    <div class="container mar">
+      <div class="item mt40">
+        <div class="title"><h2>移民项目</h2></div>
+        <div class="item_wrap mt28 clearfix">
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>奥地利居留卡项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1548382014038.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>免费医疗</li>
+                <li>免费教育</li>
+                <li>家庭补贴</li>
+                <li>儿童抚育</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>西班牙居留卡项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1548314717216.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>无需创业、无需投资、无需购房</li>
+                <li>无语言学历要求</li>
+                <li>4-8个月拿居留卡</li>
+                <li>门槛低，无需资金来源</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>马耳他国债融资居留项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1539050918253.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>全家四代移民超高性价比</li>
+                <li>全球唯一“四位一体”国家</li>
+                <li>门槛低、无移民监</li>
+                <li>一步到位获五年永居</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>加拿大雇主担保项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1528792662717.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>条件低、审批快</li>
+                <li>雇主担保成功率高</li>
+                <li>真实可靠完善背景支撑</li>
+                <li>先拿身份再登陆</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>墨西哥护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1526259311366.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>成功率高、100%移民成功</li>
+                <li>适合生活、美国的后花园</li>
+                <li>护照含金量高，144个国家免签</li>
+                <li>著名离岸金融国，资产转移便利</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>保加利亚护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1559292234852.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>欧盟公民身份</li>
+                <li>环境好福利高发达资本主义国家</li>
+                <li>全球100多个国家免签含加拿大</li>
+                <li>风景秀丽玫瑰之国长寿之乡</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>克罗地亚护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1560932913018.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>黄金护照：免签168个国家和地区</li>
+                <li>审理周期快</li>
+                <li>投资少</li>
+                <li>申请条件简</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>缅甸护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1560932497969.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>开设海外账户</li>
+                <li>转化身份</li>
+                <li>保护隐私</li>
+                <li>可以移居</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>几内亚比绍护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1537858202818.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>价格最低</li>
+                <li>速度最快</li>
+                <li>规避CRS</li>
+                <li>承认双重国籍</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>圣基茨和尼维斯护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1530257122180.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>一步到位拿护照，周期最短</li>
+                <li>无语言、年龄、学历及语言要求</li>
+                <li>英联邦国家，全球156个国家免签</li>
+                <li>实现高净值人群资产全球配置</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>马绍尔护照项目</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1550716433292.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>周期短6个月拿护照</li>
+                <li>自由出入美国</li>
+                <li>移民美国跳板</li>
+                <li>免签100多个国家和地区</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item_box fl">
+            <div class="heading">
+              <h3>
+                <a href="project_detail.html" target="_blank"
+                  ><strong>斯洛文尼亚自雇投资移民</strong></a
+                >
+              </h3>
+            </div>
+            <div class="img">
+              <a href="project_detail.html" target="_blank"
+                ><img
+                  src="assets/images/1548310270705.jpg"
+                  width="210"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <ul>
+                <li>欧盟小瑞士之称</li>
+                <li>医疗体系完善</li>
+                <li>英语普及率高</li>
+                <li>申根成员国</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="adviser" class="adviser mt40">
+        <div class="section">
+          <div class="title"><h2>移民顾问</h2></div>
+          <section class="fifth-module">
+            <div class="fhm-c-list pa dbk" style="width:15%">
+              <li class="pr fhm-cl-li pr">
+                <span class="fhm-cl-t">
+                  <div>
+                    <img
+                      class="limit"
+                      src="assets/images/1490161661656.jpg"
+                      alt=""
+                    />
+                    <div style="position:absolute; top:-45px;left:-46px;">
+                      <img
+                        class="queen"
+                        src="assets/images/queen.png"
+                        alt=""
+                        ;
+                      />
+                    </div>
+                  </div>
+                </span>
+                <span class="fhm-cl-b">
+                  <p>沈阳-Yummy</p>
+                  <p>首席金牌移民顾问</p>
+                  <ul>
+                    <li>
+                      <a target="_blank" href="javascript:void(0);">在线咨询</a>
+                    </li>
+                  </ul>
+                </span>
+                <span class="fhm-cl-p pa">
+                  <img
+                    src="assets/images/1490161667170.jpg"
+                  />
+                  <div class="info">
+                    <em style="color:#fff;margin-left: 50px;">沈阳-Yummy</em
+                    ><br />
+                    <em style="color:#fff">手机：</em>13390108362<br />
+                    <em style="color:#fff">微信：</em>13390108362<br />
+                    <em style="color:#fff;margin-left: 50px;">邮箱：</em><br />
+                    <em style="color:#fff;font-size: 12px;"
+                      >13390108362@qq.com</em
+                    ><br />
+                  </div>
+                </span>
+              </li>
+            </div>
+
+            <section class="fhm-corresponding">
+              <section class="fhm-c-list pr dbk">
+                <ul class="pa fhm-cl-ul">
+                  <li class="pr fhm-cl-li pr">
+                    <span class="fhm-cl-t">
+                      <img
+                        class="limit"
+                        src="assets/images/1522649229354.jpg"
+                        width="131"
+                      />
+                    </span>
+                    <span class="fhm-cl-b">
+                      <p>沈阳-Paul</p>
+                      <p>移民顾问</p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href="javascript:void(0);"
+                            >在线咨询</a
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                    <span class="fhm-cl-p pa">
+                      <img
+                        src="assets/images/1522649238245.jpg"
+                      />
+                      <div class="info">
+                        <em style="color:#fff;margin-left: 50px;">沈阳-Paul</em
+                        ><br />
+                        <em style="color:#fff">手机：</em>024-86275666<br />
+                        <em style="color:#fff">微信：</em>lianheyimin<br />
+                        <em style="color:#fff;margin-left: 50px;">邮箱：</em
+                        ><br />
+                        <em style="color:#fff;font-size: 12px;"
+                          >union2018@126.com</em
+                        ><br />
+                      </div>
+                    </span>
+                  </li>
+
+                  <li class="pr fhm-cl-li pr">
+                    <span class="fhm-cl-t">
+                      <img
+                        class="limit"
+                        src="assets/images/1492669221449.jpg"
+                        width="131"
+                      />
+                    </span>
+                    <span class="fhm-cl-b">
+                      <p>沈阳-Linda</p>
+                      <p>移民顾问</p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href="javascript:void(0);"
+                            >在线咨询</a
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                    <span class="fhm-cl-p pa">
+                      <img
+                        src="assets/images/1472784536891.jpg"
+                      />
+                      <div class="info">
+                        <em style="color:#fff;margin-left: 50px;">沈阳-Linda</em
+                        ><br />
+                        <em style="color:#fff">手机：</em>15712456720<br />
+                        <em style="color:#fff">微信：</em>15712456720<br />
+                        <em style="color:#fff;margin-left: 50px;">邮箱：</em
+                        ><br />
+                        <em style="color:#fff;font-size: 12px;"
+                          >632648468@qq.com</em
+                        ><br />
+                      </div>
+                    </span>
+                  </li>
+
+                  <li class="pr fhm-cl-li pr">
+                    <span class="fhm-cl-t">
+                      <img
+                        class="limit"
+                        src="assets/images/1481677186766.jpg"
+                        width="131"
+                      />
+                    </span>
+                    <span class="fhm-cl-b">
+                      <p>沈阳-Yoky</p>
+                      <p>移民顾问</p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href="javascript:void(0);"
+                            >在线咨询</a
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                    <span class="fhm-cl-p pa">
+                      <img
+                        src="assets/images/1472784524223.jpg"
+                      />
+                      <div class="info">
+                        <em style="color:#fff;margin-left: 50px;">沈阳-Yoky</em
+                        ><br />
+                        <em style="color:#fff">手机：</em>15712456760<br />
+                        <em style="color:#fff">微信：</em>15712456760<br />
+                        <em style="color:#fff;margin-left: 50px;">邮箱：</em
+                        ><br />
+                        <em style="color:#fff;font-size: 12px;"
+                          >3539937420@qq.com</em
+                        ><br />
+                      </div>
+                    </span>
+                  </li>
+
+                  <li class="pr fhm-cl-li pr">
+                    <span class="fhm-cl-t">
+                      <img
+                        class="limit"
+                        src="assets/images/1559804634678.jpg"
+                        width="131"
+                      />
+                    </span>
+                    <span class="fhm-cl-b">
+                      <p>沈阳-Susan</p>
+                      <p>移民顾问</p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href="javascript:void(0);"
+                            >在线咨询</a
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                    <span class="fhm-cl-p pa">
+                      <img
+                        src="assets/images/1559804637196.jpg"
+                      />
+                      <div class="info">
+                        <em style="color:#fff;margin-left: 50px;">沈阳-Susan</em
+                        ><br />
+                        <em style="color:#fff">手机：</em>13032413113<br />
+                        <em style="color:#fff">微信：</em>13032413113<br />
+                        <em style="color:#fff;margin-left: 50px;">邮箱：</em
+                        ><br />
+                        <em style="color:#fff;font-size: 12px;"
+                          >505643495@qq.com</em
+                        ><br />
+                      </div>
+                    </span>
+                  </li>
+
+                  <li class="pr fhm-cl-li pr">
+                    <span class="fhm-cl-t">
+                      <img
+                        class="limit"
+                        src="assets/images/1474943189609.jpg"
+                        width="131"
+                      />
+                    </span>
+                    <span class="fhm-cl-b">
+                      <p>沈阳-Coco</p>
+                      <p>移民顾问</p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href="javascript:void(0);"
+                            >在线咨询</a
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                    <span class="fhm-cl-p pa">
+                      <img
+                        src="assets/images/1474943193273.jpg"
+                      />
+                      <div class="info">
+                        <em style="color:#fff;margin-left: 50px;">沈阳-Coco</em
+                        ><br />
+                        <em style="color:#fff">手机：</em>15712456710<br />
+                        <em style="color:#fff">微信：</em>15712456710<br />
+                        <em style="color:#fff;margin-left: 50px;">邮箱：</em
+                        ><br />
+                        <em style="color:#fff;font-size: 12px;"
+                          >3287943633@qq.com</em
+                        ><br />
+                      </div>
+                    </span>
+                  </li>
+
+                  <li class="pr fhm-cl-li pr">
+                    <span class="fhm-cl-t">
+                      <img
+                        class="limit"
+                        src="assets/images/1555549526991.jpg"
+                        width="131"
+                      />
+                    </span>
+                    <span class="fhm-cl-b">
+                      <p>沈阳-Zoe</p>
+                      <p>移民顾问</p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href="javascript:void(0);"
+                            >在线咨询</a
+                          >
+                        </li>
+                      </ul>
+                    </span>
+                    <span class="fhm-cl-p pa">
+                      <img
+                        src="assets/images/1555549529882.png"
+                      />
+                      <div class="info">
+                        <em style="color:#fff;margin-left: 50px;">沈阳-Zoe</em
+                        ><br />
+                        <em style="color:#fff">手机：</em>13390103052<br />
+                        <em style="color:#fff">微信：</em>L13390103052<br />
+                        <em style="color:#fff;margin-left: 50px;">邮箱：</em
+                        ><br />
+                        <em style="color:#fff;font-size: 12px;"
+                          >1130461747@qq.com</em
+                        ><br />
+                      </div>
+                    </span>
+                  </li>
+                </ul>
+              </section>
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <div class="contrast mt40">
+        <div class="title"><h2>海外房产</h2></div>
+        <div class="contrast_box mt28 clearfix">
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryAustralia.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>澳大利亚</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryHongKong.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>香港</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryMalaysia.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>马来西亚</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryPoland.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>波兰</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryRussia.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>俄罗斯</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryAmerica.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>美国</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryLithuania.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>立陶宛</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryItaly.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>意大利</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryMoldova.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>摩尔多瓦</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryMarshall.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>马绍尔</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryHungary.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>匈牙利</span></a>
+          </div>
+          <div class="pic">
+            <a class="contrast_img" href="overseas_detail.html"
+              ><img
+                src="assets/images/countryOthers.jpg"
+                alt=""
+            /></a>
+            <a class="ceng" href="overseas_detail.html"><span>新西兰</span></a>
+          </div>
+        </div>
+        <div class="btn_country textc">
+          <input class="textc" type="button" value="一键对比所选国家" />
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOGS -->
+    <section class="module bg-white-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div class="module-header text-center">
+              <h2 class="montserrat text-uppercase">最新资讯</h2>
+              <p class="lead divider-line">
+                聚焦网站建设行业新闻，每周更新众多设计干货。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row multi-columns-row post-columns">
+          <!-- POST IMAGE -->
+          <div class="col-sm-4 col-md-4 col-lg-4">
+            <article class="post format-image bg-white">
+              <div class="post-preview">
+                <a href="news_detail.html"><img src="assets/images/aib1.jpg" alt=""/></a>
+              </div>
+              <div class="post-content con1-mf">
+                <h2 class="post-title">
+                  <a href="news_detail.html">网站建设极简设计的必要性</a>
+                </h2>
+                <ul class="post-meta">
+                  <li class="color-666">2017年4月5日</li>
+                  <li>
+                    作者编辑：
+                    <span class="color-666">关小关</span>
+                  </li>
+                </ul>
+                <p>
+                  简洁的网站能够让用户快速找到关键信息，去除了多余的设计，提高了用户转化率。弹窗在网页中是非常糟糕的一个设计，你渴望用户联系你，所以把关键的信息写在弹窗中，殊不知，用户最反感的就是弹窗...
+                </p>
+                <a href="news_detail.html" class="btn btn-lg btn-link btn-base">阅读更多 ›</a>
+              </div>
+            </article>
+          </div>
+          <!-- END POST IMAGE -->
+
+          <!-- POST SLIDER -->
+          <div class="col-sm-4 col-md-4 col-lg-4">
+            <article class="post format-slider bg-white">
+              <div class="post-preview">
+                <div
+                  class="image-slider"
+                  data-carousel-options='{"transitionStyle": "fade"}'
+                >
+                  <img src="assets/images/aib2.jpg" alt="" />
+                  <img src="assets/images/aib3.jpg" alt="" />
+                  <img src="assets/images/aib4.jpg" alt="" />
+                </div>
+              </div>
+              <div class="post-content con1-mf">
+                <h2 class="post-title">
+                  <a href="news_detail.html">网站建设如何吸引用户眼球从而提高转化率</a>
+                </h2>
+                <ul class="post-meta">
+                  <li class="color-666">2017年4月5日</li>
+                  <li>
+                    作者编辑：
+                    <span class="color-666">慕仪</span>
+                  </li>
+                </ul>
+                <p>
+                  由上而下，从首页大图开始，轮播图需要吸引眼球，所有的网站都是开始于第一印象的。所以，你需要创建一个有影响力，能够在第一眼就吸引用户的网站...
+                </p>
+                <a href="news_detail.html" class="btn btn-lg btn-link btn-base">阅读更多 ›</a>
+              </div>
+            </article>
+          </div>
+          <!-- POST SLIDER -->
+
+          <!-- POST VIDEO -->
+          <div class="col-sm-4 col-md-4 col-lg-4">
+            <article class="post format-video bg-white">
+              <div class="post-preview">
+                <div
+                  class="image-slider"
+                  data-carousel-options='{"transitionStyle": "fade"}'
+                >
+                  <img src="assets/images/aib4.jpg" alt="" />
+                  <img src="assets/images/aib2.jpg" alt="" />
+                  <img src="assets/images/aib3.jpg" alt="" />
+                </div>
+              </div>
+              <div class="post-content con1-mf">
+                <h2 class="post-title">
+                  <a href="news_detail.html">企业做网站有什么好处？</a>
+                </h2>
+                <ul class="post-meta">
+                  <li class="color-666">2017年4月3日</li>
+                  <li>
+                    作者编辑：
+                    <span class="color-666">佳佳</span>
+                  </li>
+                </ul>
+                <p>
+                  简洁的网站能够让用户快速找到关键信息，去除了多余的设计，提高了用户转化率。弹窗在网页中是非常糟糕的一个设计，你渴望用户联系你，所以把关键的信息写在弹窗中，殊不知，用户最反感的就是弹窗...
+                </p>
+                <a href="news_detail.html" class="btn btn-lg btn-link btn-base">阅读更多 ›</a>
+              </div>
+            </article>
+          </div>
+          <!-- END POST VIDEO -->
+        </div>
+        <!-- .row -->
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="text-center m-t-35">
+              <a href="news.html" class="btn btn-circle btn-lg btn-fade btn-base"
+                >更多资讯</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+    </section>
+    <!-- END BLOGS -->
+
+    <div class="footer mt28">
+      <div class="footbox">
+        <div class="con">
+          <a href="javascript:void(0);"
+            >Copyright © 联合移民 版权所有 辽ICP备16013856号-1</a
+          >
+          <a href="javascript:void(0);"
+            >联系电话：400-078-9191&nbsp;<span
+              >地址：沈阳市皇姑区蒲河街7号沈阳科技创新中心</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
