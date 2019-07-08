@@ -8,13 +8,34 @@
       content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
     />
     <title>联系我们</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/template.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/hamburgers.css" />
     <link rel="stylesheet" href="assets/css/list.css" />
     <link rel="stylesheet" href="assets/css/list_contact.css" />
-    <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/flexslider.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/div.css" />
+    <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins.min.js"></script>
+    <script type="text/javascript" src="assets/js/custom.min.js"></script>
     <script type="text/javascript" src="assets/js/base.js"></script>
     <script type="text/javascript" src="assets/js/common.js"></script>
     <script type="text/javascript" src="assets/js/type.num.js"></script>
@@ -33,6 +54,11 @@
           height="75"
           alt="牧洲国际官网"
         />
+      </div>
+      <div class="hamburger hamburger--squeeze phone-icon">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
       </div>
     </div>
     <div class="menu">
@@ -103,6 +129,16 @@
         </ul>
       </div>
     </div>
+    <div class="phone-nav">
+      <ul class="phone-nav-ul">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于牧洲</a></li>
+        <li><a href="project.html">移民项目</a></li>
+        <li><a href="overseas.html">海外房产</a></li>
+        <li><a href="news.html">新闻资讯</a></li>
+        <li><a href="contact.html" class="nav-active">联系我们</a></li>
+      </ul>
+    </div>
     <script type="text/javascript">
       function show(li) {
         var getmenu = li.getElementsByTagName("div")[0];
@@ -126,167 +162,9 @@
           <img class="icon_star" src="assets/images/star-icon.png" />
           <hr class="line1" />
         </div>
-
         <div class="contact">
-          <div class="map">
-            <!--引用百度地图API-->
-            <style type="text/css">
-              html,
-              body {
-                margin: 0;
-                padding: 0;
-              }
-              .iw_poi_title {
-                color: #cc5522;
-                font-size: 14px;
-                font-weight: bold;
-                overflow: hidden;
-                padding-right: 13px;
-                white-space: nowrap;
-              }
-              .iw_poi_content {
-                font: 12px arial, sans-serif;
-                overflow: visible;
-                padding-top: 4px;
-                white-space: -moz-pre-wrap;
-                word-wrap: break-word;
-              }
-            </style>
-            <script
-              type="text/javascript"
-              src="http://api.map.baidu.com/api?key=&v=1.1&services=true"
-            ></script>
-
-            <!--百度地图容器-->
-            <div
-              style="width:800px;height:300px;border:#ccc solid 1px;background:transparent!important;"
-              id="dituContent"
-            ></div>
-
-            <script type="text/javascript">
-              //创建和初始化地图函数：
-              function initMap() {
-                createMap(); //创建地图
-                setMapEvent(); //设置地图事件
-                addMapControl(); //向地图添加控件
-                addMarker(); //向地图中添加marker
-              }
-
-              //创建地图函数：
-              function createMap() {
-                var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
-                var point = new BMap.Point(123.420316, 41.845529); //定义一个中心点坐标
-                map.centerAndZoom(point, 18); //设定地图的中心点和坐标并将地图显示在地图容器中
-                window.map = map; //将map变量存储在全局
-              }
-
-              //地图事件设置函数：
-              function setMapEvent() {
-                map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
-                map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
-                map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
-                map.enableKeyboard(); //启用键盘上下左右键移动地图
-              }
-
-              //地图控件添加函数：
-              function addMapControl() {
-                //向地图中添加缩放控件
-                var ctrl_nav = new BMap.NavigationControl({
-                  anchor: BMAP_ANCHOR_TOP_LEFT,
-                  type: BMAP_NAVIGATION_CONTROL_LARGE
-                });
-                map.addControl(ctrl_nav);
-                //向地图中添加比例尺控件
-                var ctrl_sca = new BMap.ScaleControl({
-                  anchor: BMAP_ANCHOR_BOTTOM_LEFT
-                });
-                map.addControl(ctrl_sca);
-              }
-
-              //标注点数组
-              var markerArr = [
-                {
-                  title: "辽宁联合咨询有限公司",
-                  content: "沈阳市皇姑区蒲河街7号科技创新中心B座301",
-                  point: "123.420311|41.845589",
-                  isOpen: 1,
-                  icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 }
-                }
-              ];
-              //创建marker
-              function addMarker() {
-                for (var i = 0; i < markerArr.length; i++) {
-                  var json = markerArr[i];
-                  var p0 = json.point.split("|")[0];
-                  var p1 = json.point.split("|")[1];
-                  var point = new BMap.Point(p0, p1);
-                  var iconImg = createIcon(json.icon);
-                  var marker = new BMap.Marker(point, { icon: iconImg });
-                  var iw = createInfoWindow(i);
-                  var label = new BMap.Label(json.title, {
-                    offset: new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
-                  });
-                  marker.setLabel(label);
-                  map.addOverlay(marker);
-                  label.setStyle({
-                    borderColor: "#808080",
-                    color: "#333",
-                    cursor: "pointer"
-                  });
-
-                  (function() {
-                    var index = i;
-                    var _iw = createInfoWindow(i);
-                    var _marker = marker;
-                    _marker.addEventListener("click", function() {
-                      this.openInfoWindow(_iw);
-                    });
-                    _iw.addEventListener("open", function() {
-                      _marker.getLabel().hide();
-                    });
-                    _iw.addEventListener("close", function() {
-                      _marker.getLabel().show();
-                    });
-                    label.addEventListener("click", function() {
-                      _marker.openInfoWindow(_iw);
-                    });
-                    if (!!json.isOpen) {
-                      label.hide();
-                      _marker.openInfoWindow(_iw);
-                    }
-                  })();
-                }
-              }
-              //创建InfoWindow
-              function createInfoWindow(i) {
-                var json = markerArr[i];
-                var iw = new BMap.InfoWindow(
-                  "<b class='iw_poi_title' title='" +
-                    json.title +
-                    "'>" +
-                    json.title +
-                    "</b><div class='iw_poi_content'>" +
-                    json.content +
-                    "</div>"
-                );
-                return iw;
-              }
-              //创建一个Icon
-              function createIcon(json) {
-                var icon = new BMap.Icon(
-                  "http://app.baidu.com/map/images/us_mk_icon.png",
-                  new BMap.Size(json.w, json.h),
-                  {
-                    imageOffset: new BMap.Size(-json.l, -json.t),
-                    infoWindowOffset: new BMap.Size(json.lb + 5, 1),
-                    offset: new BMap.Size(json.x, json.h)
-                  }
-                );
-                return icon;
-              }
-
-              initMap(); //创建和初始化地图
-            </script>
+          <div class="contact-map">
+            <div id="baidu_map" class="baidu-map-wrap"></div>
           </div>
           <div class="address">
             <p>地址：沈阳市皇姑区蒲河街7号科技创新中心B座301</p>
@@ -315,4 +193,27 @@
       </div>
     </div>
   </body>
+
+  <script>
+    function loadJScript() {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src =
+        "http://api.map.baidu.com/api?v=2.0&ak=您的密钥&callback=init";
+      document.body.appendChild(script);
+    }
+    function init() {
+      var map = new BMap.Map("baidu_map"); // 创建Map实例
+      var point = new BMap.Point(121.562102, 29.814478); // 创建点坐标
+      var top_left_navigation = new BMap.NavigationControl(); //左上角，添加默认缩放平移控件
+      map.addControl(top_left_navigation);
+      map.centerAndZoom(point, 18);
+      var marker = new BMap.Marker(point); // 创建标注
+      map.addOverlay(marker); // 将标注添加到地图中
+      marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    }
+    window.onload = loadJScript; //异步加载地图
+  </script>
+
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </html>

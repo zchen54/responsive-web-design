@@ -1,0 +1,63 @@
+.news-container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.project-container {
+  max-width: 1200px;
+}
+.head .phone-icon {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.head .phone-icon .hamburger-box {
+  width: 30px;
+}
+.head .phone-icon .hamburger-box .hamburger-inner,
+.head .phone-icon .hamburger-box .hamburger-inner::before,
+.head .phone-icon .hamburger-box .hamburger-inner::after {
+  width: 30px;
+  height: 3px;
+}
+.phone-nav {
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  background: rgba(23, 150, 241, 0.8);
+  position: absolute;
+  border-top: 2px solid #eee;
+  top: 60px;
+  left: 0;
+  z-index: 999;
+}
+.phone-nav .phone-nav-ul {
+  text-align: center;
+  padding: 0 20px;
+}
+.phone-nav .phone-nav-ul li {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.phone-nav .phone-nav-ul li a {
+  color: #eee;
+}
+.phone-nav .phone-nav-ul .nav-active {
+  color: #fff;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.under-nav {
+  margin-top: 150px;
+}
+.contact-map .baidu-map-wrap {
+  width: 800px;
+  height: 300px;
+}

@@ -1,35 +1,29 @@
-var pageName = $('body').attr('name')
-
-switch(pageName) {
-	case 'index' : index(); break;
-	case 'project' : project(); break;
-	case 'news' : news(); break;
-	case 'about' : about(); break;
-	case 'contect' : contect(); break;
-	default : funDefault(); break;
-}
-
-function index() {
-	console.log('in index')
-}
-
-function project() {
-	console.log('in project')
-}
-
-function news() {
-	console.log('in news')
-}
-
-function about() {
-	console.log('in about')
-}
-
-function contect() {
-	console.log('in contect')
-}
-
+funDefault();
 function funDefault() {
-	console.log('in funDefault')
-	// 每页通用的写这儿
+  console.log("in funDefault");
+
+  // hamburger
+  var forEach = function(t, o, r) {
+    if ("[object Object]" === Object.prototype.toString.call(t))
+      for (var c in t)
+        Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
+    else for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t);
+  };
+  var hamburgers = document.querySelectorAll(".hamburger");
+  if (hamburgers.length > 0) {
+    forEach(hamburgers, function(hamburger) {
+      hamburger.addEventListener(
+        "click",
+        function() {
+          this.classList.toggle("is-active");
+        },
+        false
+      );
+    });
+  }
+
+  // phone-icon
+  $(".phone-icon").click(function(event) {
+    $(".phone-nav").slideToggle(500);
+  });
 }
