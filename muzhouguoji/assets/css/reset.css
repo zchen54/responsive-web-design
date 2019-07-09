@@ -196,7 +196,8 @@ button,
 }
 
 .logo>a>img {
-  padding-top: 30px;
+  padding-top: 10px;
+  width: 135px;
 }
 
 .telym>img {

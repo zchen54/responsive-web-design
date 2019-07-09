@@ -1,6 +1,6 @@
 @media screen and (min-width: 320px) and (max-width: 399px) {
   .head .logo a > img {
-    width: 220px;
+    width: 80px;
   }
   .footer .footbox {
     height: 140px;
@@ -746,6 +746,9 @@
   .head {
     height: 60px;
   }
+  .head .telym {
+    display: none;
+  }
   .head .logo {
     margin: 0 0 0 20px;
   }
@@ -754,6 +757,9 @@
   }
   .head .phone-icon {
     display: block;
+  }
+  .logo > a > img {
+    width: 80px;
   }
   .menu {
     display: none;
@@ -767,6 +773,10 @@
 }
 @media screen and (max-width: 1250px) {
   .my-container {
+    padding: 0 30px;
+  }
+  .head {
+    width: 100%;
     padding: 0 30px;
   }
   .footer .con {

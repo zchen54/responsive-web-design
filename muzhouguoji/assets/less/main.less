@@ -1,9 +1,13 @@
 @import 'variable.less';
 
 .news-container {
-  width: 1170px;
-  padding: 0 15px;
+  width: 1200px;
+  padding: 0;
   margin: 0 auto;
+
+  .post-columns {
+    padding: 0 30px;
+  }
 }
 
 .project-container {
@@ -12,6 +16,22 @@
 
 // header
 .head {
+  .telym {
+    padding: 14px 0;
+
+    .phone-number {
+      height: 36px;
+      line-height: 36px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #1796f1;
+      font-family: "Microsoft YaHei",
+        "Arial",
+        "Helvetica",
+        "Regular";
+    }
+  }
+
   .phone-icon {
     display: none;
     position: absolute;
@@ -80,4 +100,11 @@
     width: 800px;
     height: 300px;
   }
+}
+
+.blog-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
