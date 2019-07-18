@@ -57,6 +57,7 @@
         </div>
       </div>
     </div>
+    <div class="wrapper-under-phone-header"></div>
     <div class="menu">
       <div class="menubox">
         <ul class="clearfix nav">
@@ -209,8 +210,17 @@
       map.addControl(top_left_navigation);
       map.centerAndZoom(point, 18);
       var marker = new BMap.Marker(point); // 创建标注
+      var companyName = "<div style='color:#CC5522'>牧洲国际移民公司</div>";
+      let address = "沈阳市皇姑区蒲河街7号科技创新中心B座301";
+      var infoWindow = new BMap.InfoWindow(address, { title: companyName });
+      marker.addEventListener("click", function() {
+        this.openInfoWindow(infoWindow);
+      });
+      if (window.screen.width < 500) {
+        map.disableDragging(); //禁止拖拽
+      }
       map.addOverlay(marker); // 将标注添加到地图中
-      marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+      marker.setAnimation(BMAP_ANIMATION_DROP); //跳动的动画
     }
     window.onload = loadJScript; //异步加载地图
   </script>

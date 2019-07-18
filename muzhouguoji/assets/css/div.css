@@ -3,8 +3,8 @@
     width: 80px;
   }
   .footer .footbox {
-    height: 140px;
-    padding: 0 15px;
+    height: auto;
+    padding: 0 15px 15px;
   }
   .footer .footbox .con {
     width: 100%;
@@ -64,7 +64,23 @@
     margin: 0;
   }
   .project-content .left {
-    width: 22%;
+    width: 100%;
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-content .left li img {
+    margin-left: 30px !important;
+  }
+  .project-content .left li:first-child {
+    width: 100%;
+  }
+  .project-content .left .tab-item {
+    width: auto;
+    padding: 0 20px;
+    border: none;
+    text-indent: 0;
+    display: inline-block;
   }
   .project-content .right {
     width: 100%;
@@ -137,7 +153,7 @@
   }
   .content .content .contact .address {
     width: 96%;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
   .content .content .contact .address .qrcode {
     width: 50%;
@@ -147,8 +163,8 @@
 }
 @media screen and (min-width: 400px) and (max-width: 499px) {
   .footer .footbox {
-    height: 120px;
-    padding: 0 15px;
+    height: auto;
+    padding: 0 15px 15px;
   }
   .footer .footbox .con {
     width: 100%;
@@ -268,7 +284,7 @@
   }
   .content .content .contact .address {
     width: 96%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     position: relative;
   }
   .content .content .contact .address .qrcode {
@@ -400,7 +416,7 @@
   }
   .content .content .contact .address {
     width: 96%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     position: relative;
   }
   .content .content .contact .address .qrcode {
@@ -521,7 +537,7 @@
   }
   .content .content .contact .address {
     width: 96%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     position: relative;
   }
   .content .content .contact .address .qrcode {
@@ -639,7 +655,7 @@
   }
   .content .content .contact .address {
     width: 96%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     position: relative;
   }
   .content .content .contact .address .qrcode {
@@ -743,14 +759,20 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .head {
+  .wrapper-under-phone-header {
     height: 60px;
+  }
+  .head {
+    position: fixed;
+    height: 60px;
+    background-color: #f8f7f7;
+    z-index: 999;
   }
   .head .telym {
     display: none;
   }
   .head .logo {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 -15px;
   }
   .head .logo a > img {
     padding: 7px 0;
