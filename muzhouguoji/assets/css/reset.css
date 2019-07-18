@@ -267,6 +267,12 @@ button,
   width: 750px;
 }
 
+.sub-menu-row {
+  width: 750px;
+  display: table;
+  border-bottom: 1px #fff solid;
+}
+
 .mlft a {
   display: block;
 }
@@ -279,29 +285,29 @@ button,
 
 .mlft {
   width: 133px;
+  display: table-cell;
   height: auto;
+  vertical-align: middle;
   background-color: rgba(23, 150, 241, 0.75);
 }
 
+.mrft {
+  width: 617px;
+  display: table-cell;
+  height: auto;
+}
+
 .mrftone {
-  height: 130px;
-  border-bottom: 1px #fff solid;
+  height: auto;
+  min-height: 90px;
+  padding-bottom: 10px;
 }
 
-.mrfttwo {
-  height: 90px;
-  border-bottom: 1px #fff solid;
-}
-
-.mrfthree {
-  height: 90px;
-  border-bottom: 1px #fff solid;
-}
-
-.mrftone a {
+.menurr>.sub-menu-row>.mrft>.mrftone>a {
   display: block;
-  width: 180px;
+  min-width: 180px;
   height: 40px;
+  padding: 0 14px;
   float: left;
   line-height: 40px;
   text-align: center;
@@ -311,68 +317,11 @@ button,
   text-decoration: underline;
 }
 
-.mrfttwo a:hover {
-  text-decoration: underline;
-}
-
-.mrfthree a:hover {
-  text-decoration: underline;
-}
-
-.mrftfour a:hover {
-  text-decoration: underline;
-}
-
-.mrfttwo a {
-  display: block;
-  width: 180px;
-  height: 40px;
-  float: left;
-  line-height: 40px;
-  text-align: center;
-}
-
-.mrfthree a {
-  display: block;
-  width: 180px;
-  height: 40px;
-  float: left;
-  line-height: 40px;
-  text-align: center;
-}
-
-.mrftfour a {
-  display: block;
-  width: 200px;
-  height: 40px;
-  float: left;
-  line-height: 40px;
-  text-align: center;
-}
-
 .passport {
   display: block;
-  width: 133px;
+  /* width: 133px;
   height: 130px;
-  line-height: 130px;
-  text-align: center;
-  border-bottom: 1px #fff solid;
-}
-
-.otherpr {
-  display: block;
-  width: 133px;
-  height: 90px;
-  line-height: 90px;
-  text-align: center;
-  border-bottom: 1px #fff solid;
-}
-
-.otherp {
-  display: block;
-  width: 133px;
-  height: 90px;
-  line-height: 90px;
+  line-height: 130px; */
   text-align: center;
 }
 

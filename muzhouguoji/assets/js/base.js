@@ -186,16 +186,20 @@ $(document).ready(function(){
 /*金牌项目二级切换*/
 $(function() {
     $(".left .tab-item").first().addClass("active");
-    $(".right .tab-show").first().show();
+    $(".right .type-section").show();
     $(".left .tab-item").click(function(){
         $(this).addClass("active").siblings().removeClass("active");
         var index = $(this).index(".tab-item");
-        $(".right .tab-show").eq(index).show().siblings().hide();
-        $(".right .tab-show").eq(index).find(".type .type3").first().addClass('type2').siblings().removeClass('type2');
+        if(index===0){
+            $(".right .type-section").show();
+        } else {
+            $(".right .type-section").eq(index-1).show().siblings().hide();
+            $(".right .type-section").eq(index-1).find(".type .type3").first().addClass('type2').siblings().removeClass('type2');
+        }
     });
     $(".tab-show").each(function(){
         $(this).find(".type .type3").first().addClass('type2');
-        $(this).find(".sec_tabs .picture").first().show();
+        // $(this).find(".sec_tabs .picture").first().show();
     });
     // $(".sec_tab .sec_tit").first().addClass('on');
     // $(".sec_tabs .sec_con").first().show();

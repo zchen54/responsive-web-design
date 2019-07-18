@@ -178,14 +178,6 @@
   cursor: pointer;
 }
 
-.right .tab-show {
-  display: none;
-}
-
-.sec_tabs .picture {
-  display: none;
-}
-
 /*关于我们*/
 .content .about {
   width: 100%;
