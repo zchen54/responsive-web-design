@@ -1,4 +1,5 @@
 funDefault();
+var showPhoneNav = false;
 function funDefault() {
   console.log("in funDefault");
 
@@ -25,5 +26,15 @@ function funDefault() {
   // phone-icon
   $(".phone-icon").click(function(event) {
     $(".phone-nav").slideToggle(500);
+    showPhoneNav = !showPhoneNav;
+    if (showPhoneNav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto"; //出现滚动条
+      $("#menuProjectSub").hide();
+    }
+  });
+  $("#menuProject").click(function(event) {
+    $("#menuProjectSub").slideToggle(500);
   });
 }

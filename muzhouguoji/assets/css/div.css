@@ -786,6 +786,41 @@
   .menu {
     display: none;
   }
+  .phone-nav {
+    max-height: 460px;
+    overflow-y: scroll;
+  }
+  .phone-nav .phone-nav-ul {
+    padding: 0;
+  }
+  .phone-nav .phone-nav-ul .menurr {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    display: none;
+  }
+  .phone-nav .phone-nav-ul .menurr .sub-menu-row {
+    width: 100%;
+    display: block;
+  }
+  .phone-nav .phone-nav-ul .menurr .sub-menu-row .mlft {
+    width: 100%;
+    display: block;
+  }
+  .phone-nav .phone-nav-ul .menurr .sub-menu-row .mlft .passport {
+    padding-left: 20px;
+    text-align: left;
+  }
+  .phone-nav .phone-nav-ul .menurr .sub-menu-row .mrft {
+    width: 100%;
+    display: block;
+  }
+  .phone-nav .phone-nav-ul .menurr .sub-menu-row .mrft a {
+    width: auto;
+    min-width: 25%;
+    padding: 0 14px;
+    display: inline-block;
+  }
   .under-nav {
     margin-top: 60px;
   }
