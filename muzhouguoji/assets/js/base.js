@@ -402,20 +402,30 @@ function addHover(){
 
 function width(){
 
-			var index = $('.fhm-c-list').length;
-			
+    var itemLength = $('.fhm-c-list').eq(1).find('.fhm-cl-li').length
+    var moreThenLength = Math.floor($('.fhm-c-list').eq(1).width() / 180);
+    if(moreThenLength!==0 && itemLength > moreThenLength) {
 
-			for(var i = 0 ; i < index ; i++){
+        $('.fhm-c-list').eq(1).children('.fhm-cl-ul').append($('.fhm-c-list').eq(1).find('.fhm-cl-li:lt('+itemLength+')').clone(true));
 
-				$('.fhm-c-list').eq(i).children('.fhm-cl-ul').append($('.fhm-c-list').eq(i).find('.fhm-cl-li:lt(7)').clone(true));
+        var length = $('.fhm-c-list').eq(1).find('.fhm-cl-li').length;
 
-				var length = $('.fhm-c-list').eq(i).find('.fhm-cl-li').length;
+        $('.fhm-c-list').eq(1).children('.fhm-cl-ul').width(length*180)+'px';
 
-				$('.fhm-c-list').eq(i).children('.fhm-cl-ul').width(length*180)+'px';
+        timer(1)	
 
-			timer(i)	
+    } else {
+        var length = $('.fhm-c-list').eq(1).find('.fhm-cl-li').length;
+        $('.fhm-c-list').eq(1).children('.fhm-cl-ul').width(length*180)+'px';
+        var listWidth = $('.fhm-c-list').eq(1).width(),
+            ulWidth = $('.fhm-c-list').eq(1).children('.fhm-cl-ul').width();
+        if (listWidth-ulWidth > 30) {
+            $('.fhm-c-list').eq(1).children('.fhm-cl-ul').css({"margin-left": "30px"})
+        }else {
+            $('.fhm-c-list').eq(1).children('.fhm-cl-ul').css({"left": "auto", "right": "0"})
+        }
+    }
 
-		};
 
 };
 
@@ -423,9 +433,9 @@ function width(){
 
 function timer(h){
 
-		var width = $('.fhm-c-list').eq(h).children('.fhm-cl-ul').width()-1331;
-		
-
+		var width = $('.fhm-c-list').eq(h).children('.fhm-cl-ul').width() / 2;
+        
+        
 		var timer = null,
 
 			num = 0,
@@ -434,21 +444,21 @@ function timer(h){
 
 			myFn = function(){
 
-			num+=gun;
+                num+=gun;
 
-			if(num < - width){
+                if(num < - width){
 
-				num = 0;
+                    num = 0;
 
-			}else if(num > width){
+                }else if(num > width){
 
-				num = -width;
+                    num = -width;
 
-			}
+                }
 
-			$('.fhm-c-list').eq(h).children('.fhm-cl-ul').css('left',''+num+'px');
+                $('.fhm-c-list').eq(h).children('.fhm-cl-ul').css('left',''+num+'px');
 
-		};
+            };
 
 		timer = setInterval(myFn,30);
 

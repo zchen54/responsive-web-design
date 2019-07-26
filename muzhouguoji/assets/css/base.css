@@ -1240,7 +1240,7 @@
   width: 100%;
   height: 258px;
   display: none;
-  background: rgba(0, 0, 0, 1);
+  /* background: rgba(0, 0, 0, 1); */
 }
 
 .fhm-cl-ul {

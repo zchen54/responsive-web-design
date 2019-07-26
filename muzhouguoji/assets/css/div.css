@@ -1,4 +1,10 @@
 @media screen and (min-width: 320px) and (max-width: 399px) {
+  .fhm-corresponding {
+    width: 70%;
+  }
+  .fhm-cl-li {
+    width: 160px;
+  }
   .head .logo a > img {
     width: 80px;
   }
@@ -295,6 +301,9 @@
   }
 }
 @media screen and (min-width: 500px) and (max-width: 639px) {
+  .fhm-corresponding {
+    width: 80%;
+  }
   .footer .footbox {
     height: 120px;
     padding: 0 15px;
