@@ -22,13 +22,23 @@ $(function() {
     case "search":
       search();
       break;
-
+    case "copyright":
+      copyright();
+      break;
     default:
       funDefault();
       break;
   }
   funDefault();
 });
+
+//a标签跳转获取参数
+function getUrlParam(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return r[2];
+  return null;
+}
 
 var scrolling = false; //是否正在滚动
 var preTimestamp = 0;
@@ -52,7 +62,7 @@ function index() {
       $("body").css({ overflow: "hidden" });
     } else {
       $(".index-fixed-pagination").hide();
-      $("body").css({ overflow: "auto" });
+      $("body").css({ overflowY: "auto" });
       isFirstLoad = false;
       $(".next-page").addClass("normal-page-button");
       $(".progress-bg").hide();
@@ -196,56 +206,6 @@ function index() {
         }
       }
     });
-    // $("body").on("mousewheel", function(event) {
-    //   // console.log(event, event.originalEvent.deltaY);
-    //   if (event.originalEvent.deltaY > 0) {
-    //     if (!scrolling) {
-    //       var nextIndex =
-    //         $(".index-fixed-pagination .i-p-num.current").text() * 1;
-    //       // console.log("向下滚动", nextIndex);
-    //       if (nextIndex < 6) {
-    //         scrollToPageByIndex(nextIndex);
-    //       }
-    //     }
-    //   } else if (event.originalEvent.deltaY < 0) {
-    //     if (!scrolling) {
-    //       var nextIndex =
-    //         $(".index-fixed-pagination .i-p-num.current").text() * 1 - 2;
-    //       // console.log("page scroll up", nextIndex);
-    //       if (nextIndex < 5) {
-    //         scrollToPageByIndex(nextIndex);
-    //       }
-    //     }
-    //   }
-    // });
-
-    // 滚动监听
-    // var scrollBefore = 0;
-    // var scrollAfter = 0;
-    // $(window).scroll(function() {
-    //   scrollAfter = $(window).scrollTop();
-    //   setTimeout(() => {
-    //     if (scrollBefore < scrollAfter) {
-    //       if (!scrolling) {
-    //         var nextIndex = Math.ceil(scrollAfter / windowHeight);
-    //         console.log("向下滚动", scrollAfter, scrollBefore);
-    //         if (nextIndex < 6) {
-    //           scrollToPageByIndex(nextIndex);
-    //         }
-    //       }
-    //     } else if (scrollBefore > scrollAfter) {
-    //       if (!scrolling) {
-    //         var nextIndex = Math.floor(scrollAfter / windowHeight);
-    //         console.log("page scroll up", scrollAfter, scrollBefore);
-    //         if (nextIndex < 5) {
-    //           scrollToPageByIndex(nextIndex);
-    //         }
-    //       }
-    //     }
-
-    //     scrollBefore = scrollAfter;
-    //   }, 100);
-    // });
   } else {
     $(".index-fixed-pagination").hide();
   }
@@ -253,10 +213,76 @@ function index() {
 
 function about() {
   console.log("in about");
+  // 监听页面滚动
+  $(document).scroll(function() {
+    var scrollLength = $(document).scrollTop();
+    var bannerTopHeight = $(".about-top-banner").height() - 60;
+    if (scrollLength >= bannerTopHeight) {
+      $(".about-tab-container").addClass("tab-fixed-top");
+    } else if (scrollLength < bannerTopHeight) {
+      $(".about-tab-container").removeClass("tab-fixed-top");
+    }
+  });
+
+  // 标签页选择
+  $(".about-tab-container").on("click", ".a-tab-item", function(event) {
+    event.preventDefault();
+    var sectionId = $(this).attr("data-id");
+    var sectionOffsetTop = $("#" + sectionId).offset().top;
+    $(this).addClass("active");
+    $(this)
+      .siblings(".a-tab-item")
+      .removeClass("active");
+    scrolling = true;
+    $("html,body").animate(
+      { scrollTop: sectionOffsetTop - 110 },
+      500,
+      "linear",
+      function() {
+        setTimeout(() => {
+          scrolling = false;
+        }, 100);
+      }
+    );
+  });
 }
 
 function project() {
   console.log("in project");
+  // 监听页面滚动
+  $(document).scroll(function() {
+    var scrollLength = $(document).scrollTop();
+    var bannerTopHeight = $(".project-top-banner").height() - 60;
+    if (scrollLength >= bannerTopHeight) {
+      $(".project-tab").addClass("tab-fixed-top");
+    } else if (scrollLength < bannerTopHeight) {
+      $(".project-tab").removeClass("tab-fixed-top");
+    }
+  });
+
+  // 从首页跳转到指定模块
+  var action = getUrlParam("action");
+  if (action) {
+    console.log("A->", action);
+    var projectIndex = $("#" + action).index();
+    console.log(projectIndex, $("#" + action));
+    $(".project-top-banner .banner-item").hide();
+    $(".project-top-banner .banner-item")
+      .eq(projectIndex)
+      .show();
+    $(".project-tab .proj-tab-item").removeClass("active");
+    $(".project-tab .proj-tab-item")
+      .eq(projectIndex)
+      .addClass("active");
+    $(".project-content .proj-content-item")
+      .removeClass("active")
+      .hide();
+    $(".project-content .proj-content-item")
+      .eq(projectIndex)
+      .addClass("active")
+      .fadeIn();
+  }
+
   // 行业选择
   $(".project-tab").on("click", ".proj-tab-item", function(event) {
     event.preventDefault();
@@ -388,6 +414,17 @@ function project() {
 
 function culture() {
   console.log("in culture");
+  // 监听页面滚动
+  $(document).scroll(function() {
+    var scrollLength = $(document).scrollTop();
+    var bannerTopHeight = $(".about-top-banner").height() - 60;
+    if (scrollLength >= bannerTopHeight) {
+      $(".culture-tab").addClass("tab-fixed-top");
+    } else if (scrollLength < bannerTopHeight) {
+      $(".culture-tab").removeClass("tab-fixed-top");
+    }
+  });
+
   // 模块选择
   $(".culture-tab").on("click", ".culture-tab-item", function(event) {
     event.preventDefault();
@@ -504,17 +541,25 @@ function search() {
   });
 }
 
+function copyright() {
+  console.log("in copyright");
+  $(".header").addClass("fixed-top");
+}
+
 function funDefault() {
   console.log("in funDefault");
+  var pageName = $("body").attr("name");
   // 监听页面滚动
-  // $(document).scroll(function() {
-  //   var scrollLength = $(document).scrollTop();
-  //   if (scrollLength >= 90) {
-  //     $(".header").addClass("fixed-top");
-  //   } else if (scrollLength < 90) {
-  //     $(".header").removeClass("fixed-top");
-  //   }
-  // });
+  $(document).scroll(function() {
+    var scrollLength = $(document).scrollTop();
+    if (pageName !== "copyright") {
+      if (scrollLength >= 90) {
+        $(".header").addClass("fixed-top");
+      } else if (scrollLength < 90) {
+        $(".header").removeClass("fixed-top");
+      }
+    }
+  });
 
   // hamburger
   var forEach = function(t, o, r) {

@@ -10,20 +10,27 @@
   }
   .index-section .middle-container .title {
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  .index-section .middle-container .index-pager-wrap {
+    height: 40px;
+  }
+  .index-section .middle-container .index-pager-wrap .i-p-pager {
+    display: none;
   }
   .index-section .middle-container .content {
     font-size: 14px;
     line-height: 24px;
-    margin: 0 0 15px;
-    width: 100%;
+    margin: 0 0 25px;
+    width: 90%;
   }
   .index-section .middle-container .content:before {
     display: none;
   }
   .index-section .middle-container .partner {
     flex-direction: column;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
   }
   .index-section .middle-container .partner .p-label {
     margin-top: 0;
@@ -38,7 +45,7 @@
   }
   .index-section .middle-container .number-group {
     align-items: flex-start;
-    margin: 0 0 20px;
+    margin: 0 0 30px;
   }
   .index-section .middle-container .number-group .number {
     font-size: 14px;
@@ -322,7 +329,7 @@
   .contact-tab-container .contact-group .contact-item {
     width: 90%;
     padding-top: 20px;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .contact-tab-container .contact-group .contact-item:not(:last-child) {
     margin-right: 0;
@@ -487,6 +494,8 @@
   .culture-top-banner,
   .about-top-banner {
     height: 340px;
+    background-position: bottom left;
+    background-size: 200% 100%;
   }
   .search-container {
     padding: 60px 10px;
@@ -567,23 +576,30 @@
 }
 @media screen and (min-width: 500px) and (max-width: 639px) {
   .index-section {
-    padding: 30px 0;
+    padding: 30px 0 20px;
   }
   .index-section .middle-container {
     padding: 60px 40px 30px 20px;
   }
   .index-section .middle-container .title {
     font-size: 24px;
-    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  .index-section .middle-container .index-pager-wrap {
+    height: 40px;
+  }
+  .index-section .middle-container .index-pager-wrap .i-p-pager {
+    display: none;
   }
   .index-section .middle-container .content {
     font-size: 16px;
-    line-height: 32px;
-    margin: 20px;
+    line-height: 28px;
+    margin: 0 15px 45px;
     width: 90%;
   }
   .index-section .middle-container .partner {
     flex-direction: column;
+    margin-bottom: 40px;
   }
   .index-section .middle-container .partner .p-label {
     margin-top: 0;
@@ -884,12 +900,32 @@
   }
 }
 @media screen and (min-width: 640px) and (max-width: 767px) {
-  .index-section .middle-container {
-    padding: 0 20px;
+  .index-fixed-pagination {
+    right: 10px;
+    bottom: 10px;
   }
-  .index-section .middle-container .title {
+  .index-fixed-pagination .i-p-btn-group .i-p-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .index-section {
+    padding: 40px 0;
+  }
+  .index-section .title {
     font-size: 36px;
+    line-height: 40px;
+  }
+  .index-section .index-pager-wrap {
+    height: 40px;
+  }
+  .index-section .content {
+    width: 90%;
     margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .index-section .index-pager-wrap .i-p-pager {
+    right: -40px;
   }
   .index-news-section .news-wrap {
     margin: 0 auto;
@@ -1117,6 +1153,25 @@
     width: 40px;
     height: 40px;
   }
+  .index-section {
+    padding: 40px 0;
+  }
+  .index-section .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .index-section .index-pager-wrap {
+    height: 40px;
+  }
+  .index-section .content {
+    width: 90%;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .index-section .index-pager-wrap .i-p-pager {
+    right: -40px;
+  }
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail {
     padding-left: 15px;
     padding-right: 15px;
@@ -1224,6 +1279,25 @@
     width: 40px;
     height: 40px;
   }
+  .index-section {
+    padding: 40px 0;
+  }
+  .index-section .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .index-section .index-pager-wrap {
+    height: 40px;
+  }
+  .index-section .content {
+    width: 90%;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .index-section .index-pager-wrap .i-p-pager {
+    right: -40px;
+  }
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail {
     padding-left: 15px;
     padding-right: 15px;
@@ -1303,6 +1377,32 @@
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1499px) {
+  .index-fixed-pagination {
+    right: 10px;
+    bottom: 10px;
+  }
+  .index-fixed-pagination .i-p-btn-group .i-p-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .index-section {
+    padding: 40px 0;
+  }
+  .index-section .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .index-section .index-pager-wrap {
+    height: 40px;
+  }
+  .index-section .content {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .index-section .index-pager-wrap .i-p-pager {
+    right: -40px;
+  }
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail {
     padding-left: 15px;
     padding-right: 15px;
@@ -1360,15 +1460,12 @@
     margin-bottom: 50px;
   }
 }
-@media screen and (max-width: 639px) {
-  .index-fixed-pagination,
-  .index-section .index-pager-wrap {
+@media screen and (max-width: 1350px) {
+  .contact-tab-container .contact-map {
     display: none;
   }
-}
-@media screen and (min-width: 640px) and (max-width: 767px) {
-  .index-section .index-pager-wrap {
-    display: none;
+  .contact-tab-container .contact-map-img {
+    display: block;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1376,7 +1473,7 @@
     right: -40px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1700px) {
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
   .index-section .index-pager-wrap .i-p-pager {
     right: -15px;
   }
