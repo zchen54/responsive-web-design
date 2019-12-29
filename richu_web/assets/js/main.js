@@ -55,6 +55,17 @@ function index() {
   var autoChangePageTime = 10000; // 自动翻页时间（毫秒）
   var timeStep = autoChangePageTime / 100; // 进度条时间间隔
 
+  // 设置进度条宽度
+  var progressBtnWidth = $(".i-p-btn").width() + 2;
+  $(".circle-bar-left").css(
+    "clip",
+    "rect(0, " + progressBtnWidth / 2 + "px, auto, 0)"
+  );
+  $(".circle-bar-right").css(
+    "clip",
+    "rect(0, auto, auto, " + progressBtnWidth / 2 + "px)"
+  );
+
   function setCurrentPage(currentPage) {
     $(".index-fixed-pagination .i-p-num.current").text("0" + currentPage);
     if (currentPage < 6) {
@@ -605,29 +616,22 @@ function funDefault() {
   // 分享
   window._bd_share_config = {
     common: {
-      bdText: "慕枫建站",
-      bdDesc:
-        "慕枫建站平台专业提供高端网站建设,网站设计,企业网站制作,为广大公司客户建立高端品牌网站。",
-      bdUrl: "http://pay.mfdemo.cn/",
-      bdPic: ""
+      bdSnsKey: {},
+      bdText: "",
+      bdMini: "2",
+      bdMiniList: false,
+      bdPic: "",
+      bdStyle: "0",
+      bdSize: "16"
     },
-    share: [
-      {
-        bdSize: 32
-      }
-    ],
-    selectShare: [
-      {
-        bdselectMiniList: ["sqq", "tsina", "weixin"]
-      }
-    ]
+    share: {}
   };
   with (document)
     (0)[
       ((getElementsByTagName("head")[0] || body).appendChild(
         createElement("script")
       ).src =
-        "http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=" +
+        "http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=" +
         ~(-new Date() / 36e5))
     ];
 }

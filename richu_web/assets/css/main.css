@@ -2138,3 +2138,7 @@ a:focus {
 .bd_weixin_popup .bd_weixin_popup_foot {
   text-align: center !important;
 }
+iframe {
+  display: block;
+  height: 0;
+}
