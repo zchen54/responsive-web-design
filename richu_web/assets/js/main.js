@@ -44,6 +44,18 @@ var scrolling = false; //是否正在滚动
 var preTimestamp = 0;
 function index() {
   console.log("in index");
+  scrolling = true;
+  $("html,body").animate(
+    //执行动画，让scrollTop变为０
+    { scrollTop: 0 },
+    500,
+    "linear",
+    function() {
+      setTimeout(() => {
+        scrolling = false;
+      }, 100);
+    }
+  );
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
   var useAutoScrollPage = windowWidth > 639;
@@ -109,6 +121,19 @@ function index() {
     stopAutoChangePage();
     setCurrentPage(pageIndex + 1);
     // console.log("scrollToPageByIndex", pageIndex);
+    if ([0, 1, 2, 3, 4].indexOf(pageIndex) !== -1) {
+      $(".index-section")
+        .eq(pageIndex)
+        .addClass("active")
+        .siblings(".index-section")
+        .removeClass("active");
+    } else {
+      $(".index-section")
+        .eq(0)
+        .addClass("active")
+        .siblings(".index-section")
+        .removeClass("active");
+    }
     $("html,body")
       .stop(true)
       .animate(
@@ -201,7 +226,7 @@ function index() {
           var nextIndex =
             $(".index-fixed-pagination .i-p-num.current").text() * 1 - 2;
           // console.log("page scroll up", nextIndex);
-          if (nextIndex < 5) {
+          if (nextIndex < 5 && nextIndex >= 0) {
             scrollToPageByIndex(nextIndex);
           }
         }
@@ -612,6 +637,8 @@ function funDefault() {
       }
     );
   });
+
+  new WOW().init();
 
   // 分享
   window._bd_share_config = {

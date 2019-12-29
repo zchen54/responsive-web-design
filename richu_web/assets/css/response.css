@@ -1,6 +1,8 @@
 /* CSS Document */
 @media screen and (min-width: 320px) and (max-width: 499px) {
   .index-section {
+    visibility: visible;
+    opacity: 1;
     height: auto;
     min-height: 100%;
     padding: 50px 0 30px;
@@ -395,6 +397,12 @@
     line-height: 32px;
     font-size: 16px;
   }
+  .news-pagination .page-item {
+    font-size: 14px;
+  }
+  .news-pagination .page-item.active {
+    font-size: 16px;
+  }
   .news-detail-path {
     padding: 15px;
   }
@@ -576,6 +584,8 @@
 }
 @media screen and (min-width: 500px) and (max-width: 639px) {
   .index-section {
+    visibility: visible;
+    opacity: 1;
     padding: 30px 0 20px;
   }
   .index-section .middle-container {
