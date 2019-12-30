@@ -22,9 +22,6 @@ $(function() {
     case "search":
       search();
       break;
-    case "copyright":
-      copyright();
-      break;
     default:
       funDefault();
       break;
@@ -56,12 +53,15 @@ function index() {
       }, 100);
     }
   );
+  $("body").css("background", "#151515");
+  $("body").css("transition", "background-color 0.5s ease-in-out");
+
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
   var useAutoScrollPage = windowWidth > 639;
   var page = 1;
   var progressTimer;
-  var isFirstLoad = true; // 设为false可停止自动翻页
+  // var isFirstLoad = true; // 设为false可停止自动翻页
   var isTimerRunning = false; // 是否正在及时
   var readingTime = 0; // 页面停留时间
   var autoChangePageTime = 10000; // 自动翻页时间（毫秒）
@@ -86,11 +86,11 @@ function index() {
     } else {
       $(".index-fixed-pagination").hide();
       $("body").css({ overflowY: "auto" });
-      isFirstLoad = false;
-      $(".next-page").addClass("normal-page-button");
-      $(".progress-bg").hide();
-      $(".circle-bar-left").hide();
-      $(".circle-bar-right").hide();
+      // isFirstLoad = false;
+      // $(".next-page").addClass("normal-page-button");
+      // $(".progress-bg").hide();
+      // $(".circle-bar-left").hide();
+      // $(".circle-bar-right").hide();
     }
   }
 
@@ -108,12 +108,6 @@ function index() {
       transform: "rotate(0deg)",
       "border-color": "#fff"
     });
-    if (!isFirstLoad) {
-      $(".next-page").addClass("normal-page-button");
-      $(".progress-bg").hide();
-      $(".circle-bar-left").hide();
-      $(".circle-bar-right").hide();
-    }
   }
 
   function scrollToPageByIndex(pageIndex) {
@@ -186,7 +180,7 @@ function index() {
   // 启动倒计时
   startPageTimer();
   function startPageTimer() {
-    if (isFirstLoad && useAutoScrollPage) {
+    if (useAutoScrollPage) {
       isTimerRunning = true;
       // console.log("启动倒计时", readingTime);
       progressTimer = setInterval(function() {
@@ -249,16 +243,138 @@ function index() {
 
 function about() {
   console.log("in about");
+  var windowWidth = $(window).width();
+  var stateNum = false;
   // 监听页面滚动
   $(document).scroll(function() {
     var scrollLength = $(document).scrollTop();
-    var bannerTopHeight = $(".about-top-banner").height() - 60;
-    if (scrollLength >= bannerTopHeight) {
-      $(".about-tab-container").addClass("tab-fixed-top");
-    } else if (scrollLength < bannerTopHeight) {
-      $(".about-tab-container").removeClass("tab-fixed-top");
+    if (windowWidth < 850) {
+      var bannerTopHeight = $(".about-top-banner").height() - 60;
+      if (scrollLength >= bannerTopHeight) {
+        $(".about-tab-container").addClass("tab-fixed-top");
+      } else if (scrollLength < bannerTopHeight) {
+        $(".about-tab-container").removeClass("tab-fixed-top");
+      }
+    } else {
+      var bannerTopHeight = $(".about-top-banner").height() - 60;
+      if (scrollLength >= bannerTopHeight) {
+        $(".header").addClass("fixed-top");
+        $(".about-tab-container").addClass("tab-fixed-top-pc");
+      } else if (scrollLength < bannerTopHeight) {
+        $(".header").removeClass("fixed-top");
+        $(".about-tab-container").removeClass("tab-fixed-top-pc");
+      }
+    }
+    if (scrollLength > bannerTopHeight / 2 && !stateNum) {
+      stateNum = true;
+      loadingNumber();
     }
   });
+
+  // 动态数字
+  function loadingNumber() {
+    $.fn.countTo = function(options) {
+      options = options || {};
+
+      return $(this).each(function() {
+        // set options for current element
+        var settings = $.extend(
+          {},
+          $.fn.countTo.defaults,
+          {
+            from: $(this).data("from"),
+            to: $(this).data("to"),
+            speed: $(this).data("speed"),
+            refreshInterval: $(this).data("refresh-interval"),
+            decimals: $(this).data("decimals")
+          },
+          options
+        );
+
+        // how many times to update the value, and how much to increment the value on each update
+        var loops = Math.ceil(settings.speed / settings.refreshInterval),
+          increment = (settings.to - settings.from) / loops;
+
+        // references & variables that will change with each update
+        var self = this,
+          $self = $(this),
+          loopCount = 0,
+          value = settings.from,
+          data = $self.data("countTo") || {};
+
+        $self.data("countTo", data);
+
+        // if an existing interval can be found, clear it first
+        if (data.interval) {
+          clearInterval(data.interval);
+        }
+        data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+        // initialize the element with the starting value
+        render(value);
+
+        function updateTimer() {
+          value += increment;
+          loopCount++;
+
+          render(value);
+
+          if (typeof settings.onUpdate == "function") {
+            settings.onUpdate.call(self, value);
+          }
+
+          if (loopCount >= loops) {
+            // remove the interval
+            $self.removeData("countTo");
+            clearInterval(data.interval);
+            value = settings.to;
+
+            if (typeof settings.onComplete == "function") {
+              settings.onComplete.call(self, value);
+            }
+          }
+        }
+
+        function render(value) {
+          var formattedValue = settings.formatter.call(self, value, settings);
+          $self.html(formattedValue);
+        }
+      });
+    };
+
+    $.fn.countTo.defaults = {
+      from: 0, // the number the element should start at
+      to: 0, // the number the element should end at
+      speed: 1000, // how long it should take to count between the target numbers
+      refreshInterval: 100, // how often the element should be updated
+      decimals: 0, // the number of decimal places to show
+      formatter: formatter, // handler for formatting the value before rendering
+      onUpdate: null, // callback method for every time the element is updated
+      onComplete: null // callback method for when the element finishes updating
+    };
+
+    function formatter(value, settings) {
+      return value.toFixed(settings.decimals);
+    }
+
+    // custom formatting example
+    $(".count-number").data("countToOptions", {
+      formatter: function(value, options) {
+        return value
+          .toFixed(options.decimals)
+          .replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
+      }
+    });
+
+    // start all the timers
+    $(".timer").each(count);
+
+    function count(options) {
+      var $this = $(this);
+      options = $.extend({}, options || {}, $this.data("countToOptions") || {});
+      $this.countTo(options);
+    }
+  }
 
   // 标签页选择
   $(".about-tab-container").on("click", ".a-tab-item", function(event) {
@@ -285,23 +401,34 @@ function about() {
 
 function project() {
   console.log("in project");
+  var windowWidth = $(window).width();
+  var bannerTopHeight = $(".project-top-banner").height() - 60;
   // 监听页面滚动
   $(document).scroll(function() {
     var scrollLength = $(document).scrollTop();
-    var bannerTopHeight = $(".project-top-banner").height() - 60;
-    if (scrollLength >= bannerTopHeight) {
-      $(".project-tab").addClass("tab-fixed-top");
-    } else if (scrollLength < bannerTopHeight) {
-      $(".project-tab").removeClass("tab-fixed-top");
+    if (windowWidth < 850) {
+      if (scrollLength >= bannerTopHeight) {
+        $(".project-tab").addClass("tab-fixed-top");
+      } else if (scrollLength < bannerTopHeight) {
+        $(".project-tab").removeClass("tab-fixed-top");
+      }
+    } else {
+      if (scrollLength >= bannerTopHeight) {
+        $(".header").addClass("fixed-top");
+        $(".project-tab").addClass("tab-fixed-top-pc");
+      } else if (scrollLength < bannerTopHeight) {
+        $(".header").removeClass("fixed-top");
+        $(".project-tab").removeClass("tab-fixed-top-pc");
+      }
     }
   });
 
   // 从首页跳转到指定模块
   var action = getUrlParam("action");
   if (action) {
-    console.log("A->", action);
+    // console.log("A->", action);
     var projectIndex = $("#" + action).index();
-    console.log(projectIndex, $("#" + action));
+    // console.log(projectIndex, $("#" + action));
     $(".project-top-banner .banner-item").hide();
     $(".project-top-banner .banner-item")
       .eq(projectIndex)
@@ -335,6 +462,22 @@ function project() {
     $(".project-content .proj-content-item")
       .eq(projectIndex)
       .fadeIn();
+    var scrollLengthCurrent = $(document).scrollTop();
+    if (scrollLengthCurrent >= bannerTopHeight) {
+      var projContentOffsetTop = $(".project-content").offset().top;
+      scrolling = true;
+      $("html,body").animate(
+        //执行动画，让scrollTop变为０
+        { scrollTop: projContentOffsetTop },
+        300,
+        "linear",
+        function() {
+          setTimeout(() => {
+            scrolling = false;
+          }, 100);
+        }
+      );
+    }
   });
 
   // 公司选择
@@ -410,7 +553,7 @@ function project() {
   });
 
   // 产品选择
-  $(".fx-project-wrap").on("click", ".sq-item", function(event) {
+  $(".fx-project-wrap").on("mouseenter", ".sq-item", function(event) {
     event.stopPropagation();
     event.preventDefault();
     var productIndex = $(this).index();
@@ -450,14 +593,26 @@ function project() {
 
 function culture() {
   console.log("in culture");
+  var windowWidth = $(window).width();
   // 监听页面滚动
   $(document).scroll(function() {
     var scrollLength = $(document).scrollTop();
-    var bannerTopHeight = $(".about-top-banner").height() - 60;
-    if (scrollLength >= bannerTopHeight) {
-      $(".culture-tab").addClass("tab-fixed-top");
-    } else if (scrollLength < bannerTopHeight) {
-      $(".culture-tab").removeClass("tab-fixed-top");
+    if (windowWidth < 850) {
+      var bannerTopHeight = $(".about-top-banner").height() - 60;
+      if (scrollLength >= bannerTopHeight) {
+        $(".culture-tab").addClass("tab-fixed-top");
+      } else if (scrollLength < bannerTopHeight) {
+        $(".culture-tab").removeClass("tab-fixed-top");
+      }
+    } else {
+      var bannerTopHeight = $(".about-top-banner").height() - 60;
+      if (scrollLength >= bannerTopHeight) {
+        $(".header").addClass("fixed-top");
+        $(".culture-tab").addClass("tab-fixed-top-pc");
+      } else if (scrollLength < bannerTopHeight) {
+        $(".header").removeClass("fixed-top");
+        $(".culture-tab").removeClass("tab-fixed-top-pc");
+      }
     }
   });
 
@@ -486,6 +641,18 @@ function contact() {
 
 function search() {
   console.log("in search");
+
+  // 搜索框聚焦样式
+  $("#searchInput").focus(function() {
+    $("#searchInput")
+      .parent()
+      .addClass("active");
+  });
+  $("#searchInput").blur(function() {
+    $("#searchInput")
+      .parent()
+      .removeClass("active");
+  });
 
   // 分类选择
   $(".rc-proj-select-wrap").on("click", ".btn-cir-green", function(event) {
@@ -539,7 +706,7 @@ function search() {
   });
 
   // 产品选择
-  $(".fx-project-wrap").on("click", ".sq-item", function(event) {
+  $(".fx-project-wrap").on("mouseenter", ".sq-item", function(event) {
     event.stopPropagation();
     event.preventDefault();
     var productIndex = $(this).index();
@@ -577,25 +744,20 @@ function search() {
   });
 }
 
-function copyright() {
-  console.log("in copyright");
-  $(".header").addClass("fixed-top");
-}
-
 function funDefault() {
   console.log("in funDefault");
   var pageName = $("body").attr("name");
   // 监听页面滚动
-  $(document).scroll(function() {
-    var scrollLength = $(document).scrollTop();
-    if (pageName !== "copyright") {
-      if (scrollLength >= 90) {
-        $(".header").addClass("fixed-top");
-      } else if (scrollLength < 90) {
-        $(".header").removeClass("fixed-top");
-      }
-    }
-  });
+  // $(document).scroll(function() {
+  //   var scrollLength = $(document).scrollTop();
+  //   if (pageName !== "copyright") {
+  //     if (scrollLength >= 90) {
+  //       $(".header").addClass("fixed-top");
+  //     } else if (scrollLength < 90) {
+  //       $(".header").removeClass("fixed-top");
+  //     }
+  //   }
+  // });
 
   // hamburger
   var forEach = function(t, o, r) {
@@ -637,8 +799,6 @@ function funDefault() {
       }
     );
   });
-
-  new WOW().init();
 
   // 分享
   window._bd_share_config = {
