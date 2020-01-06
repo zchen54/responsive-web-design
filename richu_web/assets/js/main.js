@@ -238,6 +238,7 @@ function index() {
     });
   } else {
     $(".index-fixed-pagination").hide();
+    $(".index-section").addClass("active");
   }
 }
 

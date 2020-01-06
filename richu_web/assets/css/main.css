@@ -1,6 +1,16 @@
 @font-face {
-  font-family: regularFont;
+  font-family: regularPoppins;
   src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: boldPoppins;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+.en-r-po {
+  font-family: regularPoppins;
+}
+.en-b-po {
+  font-family: boldPoppins;
 }
 body,
 td,
@@ -183,7 +193,7 @@ a:focus {
 }
 .footer .btn-scroll-top {
   height: 54px;
-  background: #F6F8F6;
+  background: #f6f8f6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,7 +246,7 @@ a:focus {
   font-size: 16px;
   line-height: 16px;
   color: #333333;
-  border-bottom: 1px solid #E6E9E6;
+  border-bottom: 1px solid #e6e9e6;
 }
 .footer .f-main .link-group .link-item:hover {
   color: #007f68;
@@ -251,7 +261,7 @@ a:focus {
   position: relative;
 }
 .footer .f-main .link-group .link-item .sq-arrow:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 4px;
@@ -289,6 +299,8 @@ a:focus {
 }
 .footer .f-main .f-content .content-item .share-mf {
   margin-top: 15px;
+  display: flex;
+  align-items: center;
 }
 .footer .f-main .f-content .content-item .share-mf .icon {
   width: 18px;
@@ -300,22 +312,24 @@ a:focus {
   background-position: 0 0 !important;
 }
 .footer .f-main .f-content .content-item .share-mf .icon:first-child {
-  background-image: url('../img/qq.svg');
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/qq.svg");
 }
 .footer .f-main .f-content .content-item .share-mf .icon:first-child:hover {
-  background-image: url('../img/qq-ac.svg');
+  background-image: url("../img/qq-ac.svg");
 }
 .footer .f-main .f-content .content-item .share-mf .icon:nth-child(2) {
-  background-image: url('../img/wechat.svg');
+  background-image: url("../img/wechat.svg");
 }
 .footer .f-main .f-content .content-item .share-mf .icon:nth-child(2):hover {
-  background-image: url('../img/wechat-ac.svg');
+  background-image: url("../img/wechat-ac.svg");
 }
 .footer .f-main .f-content .content-item .share-mf .icon:last-child {
-  background-image: url('../img/weibo.svg');
+  background-image: url("../img/weibo.svg");
 }
 .footer .f-main .f-content .content-item .share-mf .icon:last-child:hover {
-  background-image: url('../img/weibo-ac.svg');
+  background-image: url("../img/weibo-ac.svg");
 }
 .footer .f-copyright {
   height: 54px;
@@ -338,8 +352,8 @@ a:focus {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: linear .5s all;
-  -webkit-transition: linear .5s all;
+  transition: linear 0.5s all;
+  -webkit-transition: linear 0.5s all;
   visibility: hidden;
   opacity: 0;
   transform: rotateX(-35deg);
@@ -370,7 +384,7 @@ a:focus {
   position: relative;
 }
 .index-section .index-pager-wrap:before {
-  content: '';
+  content: "";
   position: absolute;
   display: inline-block;
   top: 50%;
@@ -426,7 +440,7 @@ a:focus {
   position: absolute;
   top: 12px;
   left: -22px;
-  content: '';
+  content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -521,9 +535,9 @@ a:focus {
 }
 .index-news-section .news-wrap .en-title {
   font-size: 16px;
-  font-family: Poppins;
+  font-family: boldPoppins;
   font-weight: bold;
-  color: #7B7B7B;
+  color: #7b7b7b;
   margin-bottom: 22px;
   text-align: left;
 }
@@ -570,7 +584,7 @@ a:focus {
   position: absolute;
   top: 8px;
   left: -18px;
-  content: '';
+  content: "";
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -586,7 +600,7 @@ a:focus {
 .about-tab-container {
   background: #fff;
   width: 100%;
-  border-bottom: 1px solid #D5D5D5;
+  border-bottom: 1px solid #d5d5d5;
   display: flex;
 }
 .about-tab-container.tab-fixed-top {
@@ -607,13 +621,13 @@ a:focus {
   user-select: none;
 }
 .about-tab-container .a-tab-item:nth-child(1) {
-  border-right: 1px solid #D5D5D5;
+  border-right: 1px solid #d5d5d5;
 }
 .about-tab-container .a-tab-item.active span:before {
   position: absolute;
   top: 20px;
   left: -18px;
-  content: '';
+  content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -640,8 +654,8 @@ a:focus {
 }
 .ri-chu-about .en-title {
   font-size: 16px;
-  font-family: Poppins;
-  color: #7B7B7B;
+  font-family: regularPoppins;
+  color: #7b7b7b;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -681,7 +695,7 @@ a:focus {
   font-size: 48px;
   line-height: 55px;
   font-weight: bold;
-  font-family: Poppins;
+  font-family: boldPoppins;
   color: #007f68;
   margin-bottom: 15px;
 }
@@ -714,7 +728,7 @@ a:focus {
   position: relative;
 }
 .ri-chu-about .detail-row .col-left .detail-item:not(:last-child):after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -722,7 +736,7 @@ a:focus {
   width: 95%;
   max-width: 650px;
   height: 1px;
-  background: #EBEBEB;
+  background: #ebebeb;
 }
 .ri-chu-about .detail-row .col-left .detail-item .item-l {
   width: 100%;
@@ -773,7 +787,7 @@ a:focus {
 }
 .project-tab-container .project-tab {
   width: 100%;
-  border-bottom: 1px solid #D5D5D5;
+  border-bottom: 1px solid #d5d5d5;
   background: #fff;
   display: flex;
 }
@@ -798,7 +812,7 @@ a:focus {
   position: absolute;
   top: 20px;
   left: -18px;
-  content: '';
+  content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -811,7 +825,7 @@ a:focus {
   color: rgba(0, 127, 104, 0.6);
 }
 .project-tab-container .project-tab .proj-tab-item:not(:last-child) {
-  border-right: 1px solid #D5D5D5;
+  border-right: 1px solid #d5d5d5;
 }
 .project-tab-container .project-tab .proj-tab-item span {
   font-size: 18px;
@@ -876,7 +890,7 @@ a:focus {
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .fx-title-en {
   font-size: 16px;
-  font-family: Poppins;
+  font-family: boldPoppins;
   color: #606060;
   font-weight: bold;
   text-align: center;
@@ -894,7 +908,7 @@ a:focus {
   max-width: 860px;
   margin: 0 auto;
   font-size: 16px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   text-align: center;
   margin-bottom: 60px;
   line-height: 32px;
@@ -911,14 +925,14 @@ a:focus {
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .fx-num-group .num {
   display: inline-block;
   font-size: 20px;
-  color: #006B63;
+  color: #006b63;
   font-weight: bold;
   font-family: Microsoft YaHei;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .fx-num-group .num span {
   padding-left: 6px;
   font-size: 14px;
-  color: #C0C0C0;
+  color: #c0c0c0;
   font-weight: normal;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .fx-num-group .middle-space {
@@ -926,7 +940,7 @@ a:focus {
   margin: 0 18px;
   width: 1px;
   height: 14px;
-  background: #C0C0C0;
+  background: #c0c0c0;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .fx-image-row {
   width: 100%;
@@ -973,7 +987,7 @@ a:focus {
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-info-row .row-left .company-desc {
   font-size: 16px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   line-height: 32px;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-info-row .row-right {
@@ -1007,7 +1021,7 @@ a:focus {
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .two-a4-image .a4-item {
   width: 50%;
   padding: 25px 10px;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #c0c0c0;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .right-table {
   width: 100%;
@@ -1021,7 +1035,7 @@ a:focus {
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .right-table .table-col {
   min-width: 250px;
   padding: 0 10px;
-  border-right: 1px solid #C4C4C4;
+  border-right: 1px solid #c4c4c4;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .right-table .table-col .title {
   height: 108px;
@@ -1030,7 +1044,7 @@ a:focus {
   align-items: center;
   text-align: center;
   font-size: 18px;
-  font-family: Poppins;
+  font-family: boldPoppins;
   font-weight: bold;
   color: #007f68;
   line-height: 24px;
@@ -1041,7 +1055,7 @@ a:focus {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-family: Poppins;
+  font-family: regularPoppins;
   font-weight: 400;
   color: #7f7f7f;
   line-height: 24px;
@@ -1056,7 +1070,7 @@ a:focus {
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-product-wrap .title-en-sm {
   font-size: 16px;
-  font-family: Poppins;
+  font-family: boldPoppins;
   color: #333;
   font-weight: bold;
   line-height: 24px;
@@ -1086,7 +1100,7 @@ a:focus {
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-product-wrap .product-rwo .left-content .c-content {
   font-size: 16px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   line-height: 32px;
 }
 .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-product-wrap .product-rwo .right-img {
@@ -1108,7 +1122,7 @@ a:focus {
 }
 .project-tab-container .project-content .proj-content-item .project-partner .title-en {
   font-size: 16px;
-  font-family: Poppins;
+  font-family: boldPoppins;
   color: #333333;
   font-weight: bold;
   text-align: center;
@@ -1436,7 +1450,7 @@ a:focus {
 }
 .culture-tab-container .culture-tab {
   width: 100%;
-  border-bottom: 1px solid #D5D5D5;
+  border-bottom: 1px solid #d5d5d5;
   background: #fff;
   display: flex;
 }
@@ -1461,7 +1475,7 @@ a:focus {
   position: absolute;
   top: 20px;
   left: -18px;
-  content: '';
+  content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -1474,7 +1488,7 @@ a:focus {
   color: rgba(0, 127, 104, 0.6);
 }
 .culture-tab-container .culture-tab .culture-tab-item:not(:last-child) {
-  border-right: 1px solid #D5D5D5;
+  border-right: 1px solid #d5d5d5;
 }
 .culture-tab-container .culture-tab .culture-tab-item span {
   font-size: 18px;
@@ -1542,7 +1556,7 @@ a:focus {
   background: #007f68;
 }
 .culture-tab-container .culture-content .culture-content-item .culture-container .intro-rwo .intro-item .t-label-cir:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 22px;
@@ -1621,7 +1635,7 @@ a:focus {
   margin: 0 auto;
   padding: 105px 30px;
   overflow: hidden;
-  background: #FAFAFA;
+  background: #fafafa;
 }
 .search-container .search-input-row {
   width: 100%;
@@ -1644,8 +1658,8 @@ a:focus {
   height: 46px;
   margin: 0 6px 40px;
   padding: 0 25px;
-  border: 2px solid #006B63;
-  background: #006B63;
+  border: 2px solid #006b63;
+  background: #006b63;
   border-radius: 23px;
   line-height: 46px;
 }
@@ -1688,7 +1702,7 @@ a:focus {
 .search-container .s-keyword {
   font-size: 25px;
   font-weight: bold;
-  color: #006B63;
+  color: #006b63;
   line-height: 32px;
   text-align: center;
   margin-bottom: 70px;
@@ -1756,6 +1770,7 @@ a:focus {
 }
 .contact-tab-container .contact-group .contact-item .c-text {
   font-size: 14px;
+  font-family: regularPoppins;
   color: #606060;
   line-height: 24px;
 }
@@ -1826,7 +1841,7 @@ a:focus {
 .company-contact-container .company-contact-wrap .company-contact-item .c-name {
   font-size: 16px;
   font-weight: bold;
-  color: #007F68;
+  color: #007f68;
   line-height: 24px;
   margin-bottom: 20px;
 }
@@ -1852,7 +1867,7 @@ a:focus {
   line-height: 20px;
 }
 .company-contact-container .company-contact-wrap .company-contact-item:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 20px;
@@ -1875,7 +1890,7 @@ a:focus {
   position: relative;
 }
 .small-font-link:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 7px;
   left: -18px;
@@ -1894,8 +1909,8 @@ a:focus {
 }
 .en-title {
   font-size: 16px;
-  font-family: Poppins;
-  color: #7B7B7B;
+  font-family: boldPoppins;
+  color: #7b7b7b;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
@@ -1994,14 +2009,14 @@ a:focus {
 .rc-proj-select-wrap .btn-cir-green {
   width: 100%;
   height: 100%;
-  background: #006B63;
+  background: #006b63;
   border-radius: 22px;
   font-size: 18px;
-  color: #FEFEFE;
+  color: #fefefe;
   line-height: 46px;
   cursor: pointer;
   padding: 0 25px;
-  border: 2px solid #006B63;
+  border: 2px solid #006b63;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2099,7 +2114,7 @@ a:focus {
   width: 100%;
   max-width: 160px;
   height: 160px;
-  border: 6px solid #EDEDED;
+  border: 6px solid #ededed;
   margin-right: -6px;
   margin-top: -6px;
   display: flex;
@@ -2118,12 +2133,13 @@ a:focus {
 }
 .fx-project-wrap .fx-project-sq-row .sq-item .cn {
   font-size: 18px;
-  color: #4A5A5C;
+  color: #4a5a5c;
   margin-bottom: 5px;
   display: inline-block;
 }
 .fx-project-wrap .fx-project-sq-row .sq-item .en {
   font-size: 14px;
+  font-family: regularPoppins;
   color: #606060;
   display: inline-block;
 }
@@ -2165,7 +2181,7 @@ a:focus {
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .left-content .t-b-line {
   width: 90%;
   height: 1px;
-  background: #EBEBEB;
+  background: #ebebeb;
   margin: 25px 5px 25px;
 }
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .left-content .desc-list {
@@ -2176,7 +2192,7 @@ a:focus {
   position: relative;
 }
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .left-content .desc-list:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -2194,7 +2210,7 @@ a:focus {
 }
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .left-content .desc-list .d-text {
   font-size: 18px;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .left-content .used-list {
   margin-bottom: 20px;
@@ -2209,7 +2225,7 @@ a:focus {
 }
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .left-content .used-list .d-text {
   font-size: 18px;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 .fx-project-wrap .fx-project-detail-pos .fx-project-detail-window .proj-win-detail-item .right-img {
   width: 30%;

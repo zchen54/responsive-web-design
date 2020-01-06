@@ -1436,11 +1436,11 @@
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-info-row .row-right img {
     margin: 10px;
   }
-  .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row {
-    flex-direction: column;
-  }
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .two-a4-image {
-    margin-bottom: 50px;
+    margin-right: 20px;
+  }
+  .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .right-table .table-col {
+    min-width: 200px;
   }
   .ri-chu-about .detail-row .col-left {
     padding: 25px;
@@ -1463,11 +1463,8 @@
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .company-info-row .row-right img {
     margin: 10px;
   }
-  .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row {
-    flex-direction: column;
-  }
   .project-tab-container .project-content .proj-content-item .content-tab-wrap .content-detail .verify-pic-row .two-a4-image {
-    margin-bottom: 50px;
+    margin-right: 20px;
   }
 }
 @media screen and (max-width: 1350px) {
@@ -1600,7 +1597,7 @@
     max-width: 25%;
   }
   .footer .f-main .f-content .content-item:nth-child(2) {
-    max-width: 40%;
+    max-width: 60%;
   }
   .footer .f-main .f-content .content-item .share-mf .icon {
     margin-right: 15px;
