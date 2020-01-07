@@ -50,7 +50,7 @@ function index() {
     function() {
       setTimeout(() => {
         scrolling = false;
-      }, 100);
+      }, 1000);
     }
   );
   $("body").css("background", "#151515");
@@ -141,7 +141,7 @@ function index() {
             if (!isTimerRunning) {
               startPageTimer();
             }
-          }, 100);
+          }, 1000);
         }
       );
   }
@@ -240,6 +240,26 @@ function index() {
     $(".index-fixed-pagination").hide();
     $(".index-section").addClass("active");
   }
+
+  $("#toTop").click(function() {
+    scrolling = true;
+    $("html,body").animate(
+      //执行动画，让scrollTop变为０
+      { scrollTop: 0 },
+      500,
+      "linear",
+      function() {
+        stopAutoChangePage();
+        setCurrentPage(1);
+        setTimeout(() => {
+          scrolling = false;
+          if (!isTimerRunning) {
+            startPageTimer();
+          }
+        }, 1000);
+      }
+    );
+  });
 }
 
 function about() {
@@ -394,7 +414,7 @@ function about() {
       function() {
         setTimeout(() => {
           scrolling = false;
-        }, 100);
+        }, 1000);
       }
     );
   });
@@ -475,7 +495,7 @@ function project() {
         function() {
           setTimeout(() => {
             scrolling = false;
-          }, 100);
+          }, 1000);
         }
       );
     }
@@ -786,20 +806,22 @@ function funDefault() {
   });
 
   //返回顶部
-  $("#toTop").click(function() {
-    scrolling = true;
-    $("html,body").animate(
-      //执行动画，让scrollTop变为０
-      { scrollTop: 0 },
-      500,
-      "linear",
-      function() {
-        setTimeout(() => {
-          scrolling = false;
-        }, 100);
-      }
-    );
-  });
+  if (pageName !== "index") {
+    $("#toTop").click(function() {
+      scrolling = true;
+      $("html,body").animate(
+        //执行动画，让scrollTop变为０
+        { scrollTop: 0 },
+        500,
+        "linear",
+        function() {
+          setTimeout(() => {
+            scrolling = false;
+          }, 1000);
+        }
+      );
+    });
+  }
 
   // 分享
   window._bd_share_config = {

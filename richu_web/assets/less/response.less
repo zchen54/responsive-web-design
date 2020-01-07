@@ -2002,24 +2002,20 @@
             padding-right: 15px;
 
             .company-info-row {
-              flex-wrap: wrap;
-              justify-content: space-around;
-              max-width: 990px;
+              padding-right: 0;
 
               .row-left {
-                width: 100%;
-                margin-bottom: 50px;
+                padding-right: 10px;
+                width: 34%;
                 margin-right: 0;
-                text-align: center;
               }
 
               .row-right {
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: center;
+                width: 65%;
+                justify-content: flex-end;
 
                 img {
-                  margin: 10px;
+                  margin: 8px;
                 }
               }
             }
@@ -2050,6 +2046,47 @@
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+  .project-tab-container {
+    .project-content {
+      .proj-content-item {
+        .content-tab-wrap {
+          .content-detail {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .company-info-row {
+              padding-right: 0;
+
+              .row-left {
+                width: 34%;
+                margin-right: 0;
+              }
+
+              .row-right {
+                width: 65%;
+                justify-content: flex-start;
+
+                img {
+                  margin: 8px;
+
+                  &:first-child {
+                    width: 63%;
+                  }
+
+                  &:last-child {
+                    width: 34%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1500px) and (max-width: 1680px) {
   .project-tab-container {
     .project-content {
@@ -2061,13 +2098,13 @@
 
             .company-info-row {
               .row-left {
-                width: 38%;
+                padding-left: 30px;
+                width: 40%;
                 margin-right: 0;
               }
 
               .row-right {
-                width: 60%;
-                flex-wrap: wrap;
+                width: 58%;
                 justify-content: flex-start;
 
                 img {
