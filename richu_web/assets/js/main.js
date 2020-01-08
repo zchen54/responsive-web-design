@@ -444,63 +444,6 @@ function project() {
     }
   });
 
-  // 从首页跳转到指定模块
-  var action = getUrlParam("action");
-  if (action) {
-    // console.log("A->", action);
-    var projectIndex = $("#" + action).index();
-    // console.log(projectIndex, $("#" + action));
-    $(".project-top-banner .banner-item").hide();
-    $(".project-top-banner .banner-item")
-      .eq(projectIndex)
-      .show();
-    $(".project-tab .proj-tab-item").removeClass("active");
-    $(".project-tab .proj-tab-item")
-      .eq(projectIndex)
-      .addClass("active");
-    $(".project-content .proj-content-item")
-      .removeClass("active")
-      .hide();
-    $(".project-content .proj-content-item")
-      .eq(projectIndex)
-      .addClass("active")
-      .fadeIn();
-  }
-
-  // 行业选择
-  $(".project-tab").on("click", ".proj-tab-item", function(event) {
-    event.preventDefault();
-    var projectIndex = $(this).index();
-    $(this).addClass("active");
-    $(this)
-      .siblings(".proj-tab-item")
-      .removeClass("active");
-    $(".project-top-banner .banner-item").hide();
-    $(".project-top-banner .banner-item")
-      .eq(projectIndex)
-      .show();
-    $(".project-content .proj-content-item").hide();
-    $(".project-content .proj-content-item")
-      .eq(projectIndex)
-      .fadeIn();
-    var scrollLengthCurrent = $(document).scrollTop();
-    if (scrollLengthCurrent >= bannerTopHeight) {
-      var projContentOffsetTop = $(".project-content").offset().top;
-      scrolling = true;
-      $("html,body").animate(
-        //执行动画，让scrollTop变为０
-        { scrollTop: projContentOffsetTop },
-        300,
-        "linear",
-        function() {
-          setTimeout(() => {
-            scrolling = false;
-          }, 1000);
-        }
-      );
-    }
-  });
-
   // 公司选择
   $(".content-tab").on("click", ".content-tab-item", function(event) {
     event.preventDefault();
