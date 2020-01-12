@@ -507,6 +507,27 @@ function project() {
       .parent()
       .parent()
       .hide();
+    // 过滤产品
+    var productList = $(this)
+      .parent()
+      .parent()
+      .parent()
+      .siblings(".fx-project-wrap")
+      .find(".sq-item");
+    if (selectedValue === "全部") {
+      productList.show();
+    } else {
+      productList.each(function() {
+        if ($(this).attr("data-value") === selectedValue) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+    $(".fx-project-detail-window").fadeOut();
+    $(".fx-project-wrap .sq-item").removeClass("active");
+    $(".fx-project-detail-window").removeClass("active");
   });
   // 关闭分类选择
   $(document).click(function() {
@@ -660,6 +681,28 @@ function search() {
       .parent()
       .parent()
       .hide();
+    // 过滤产品
+    var productList = $(this)
+      .parent()
+      .parent()
+      .parent()
+      .parent()
+      .siblings(".fx-project-wrap")
+      .find(".sq-item");
+    if (selectedValue === "全部") {
+      productList.show();
+    } else {
+      productList.each(function() {
+        if ($(this).attr("data-value") === selectedValue) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+    $(".fx-project-detail-window").fadeOut();
+    $(".fx-project-wrap .sq-item").removeClass("active");
+    $(".fx-project-detail-window").removeClass("active");
   });
   // 关闭分类选择
   $(document).click(function() {
