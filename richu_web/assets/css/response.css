@@ -118,9 +118,6 @@
     width: 40px;
     height: 40px;
   }
-  .project-top-banner {
-    height: 340px;
-  }
   .project-tab-container .project-tab .proj-tab-item.active span:before {
     display: none;
   }
@@ -501,7 +498,6 @@
   }
   .culture-top-banner,
   .about-top-banner {
-    height: 340px;
     background-position: bottom left;
     background-size: 200% 100%;
   }

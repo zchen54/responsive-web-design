@@ -594,8 +594,9 @@ a:focus {
 }
 .about-top-banner {
   width: 100%;
-  height: 640px;
-  background-repeat: no-repeat;
+}
+.about-top-banner .banner-img {
+  width: 100%;
 }
 .about-tab-container {
   background: #fff;
@@ -771,19 +772,6 @@ a:focus {
   width: 100%;
   max-width: 1435px;
   margin: 0 auto 145px;
-}
-.project-top-banner {
-  width: 100%;
-  height: 637px;
-  overflow: hidden;
-}
-.project-top-banner .banner-item {
-  display: none;
-  width: 100%;
-  height: 100%;
-}
-.project-top-banner .banner-item.active {
-  display: block;
 }
 .project-tab-container .project-tab {
   width: 100%;
